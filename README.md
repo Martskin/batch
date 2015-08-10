@@ -1,5 +1,5 @@
 
-![Batch](https://cloud.githubusercontent.com/assets/3717760/9078013/71b6bd04-3b03-11e5-8d6d-53d561adbd71.png)
+![batch-logo](https://cloud.githubusercontent.com/assets/3717760/9185102/650d888e-3f87-11e5-8087-42e89499d73a.png)
 
 
 #Batch
