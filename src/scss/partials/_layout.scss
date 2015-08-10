@@ -1,0 +1,24 @@
+// Layout
+
+.l-row {
+	padding:$large-spacing $small-spacing;
+}
+
+.l-row--amber {
+	color:$white;
+	background-color:$barrel-amber;
+}
+
+.l-row--brown {
+	color:$white;
+	background-color:$barrel-brown;
+}
+
+.l-row--gold {
+	color:$white;
+	background-color:$barrel-gold;
+}
+
+.l-container {
+	@include outer-container($container-width);
+}

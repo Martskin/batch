@@ -1,0 +1,32 @@
+// Style
+
+//----------------------------------*\
+// Config
+//----------------------------------*/
+
+// Reset 
+@import 'modules/_normalize.scss';
+
+//----------------------------------*\
+// Bourbon
+//----------------------------------*/
+
+@import "bourbon";
+@import "base/base";
+@import "neat";
+
+//----------------------------------*\
+// Batch Grid
+//----------------------------------*/
+
+@import "batch/batch";
+
+//----------------------------------*\
+// Partials
+//----------------------------------*/
+
+@import 'partials/_header.scss';
+@import 'partials/_nav.scss';
+@import 'partials/_layout.scss';
+@import 'partials/_footer.scss';
+@import 'partials/_app.scss';
