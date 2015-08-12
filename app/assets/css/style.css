@@ -787,41 +787,6 @@ html {
     -ms-flex: 0 0 87.5%;
     flex: 0 0 87.5%; } }
 
-pre {
-  font-size: 0.8em;
-  line-height: 1.25em;
-  font-family: Consolas, monaco, monospace;
-  color: #333;
-  white-space: pre-line;
-  background: #f9f9f9;
-  border-radius: 4px;
-  padding: 5px;
-  display: inline-block; }
-
-.pre-block {
-  white-space: pre;
-  display: block; }
-
-code {
-  font-size: 0.8em;
-  line-height: 1.25em;
-  font-family: Consolas, monaco, monospace; }
-  code .code-o {
-    color: #DE8A00; }
-  code .code-c {
-    color: #803800; }
-  code .code-n {
-    color: #B92F00; }
-
-.batch-g_docs {
-  background: #fff3de;
-  margin-bottom: 30px;
-  padding: 10px 5px 0 5px; }
-  .batch-g_docs [class^="batch-u"] {
-    background: #ffffff;
-    padding: 10px;
-    border-color: #fff3de; }
-
 .btn, button {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -962,15 +927,52 @@ code {
   font-size: 5em; }
   @media screen and (min-width: 53.75em) {
     .feature-object_icon {
-      font-size: 10em; } }
+      font-size: 8em; } }
 
 .comment {
   opacity: 0.5;
   font-family: Consolas, monaco, monospace; }
 
-.footer {
-  padding: 4.5em 0;
-  font-size: 0.8em; }
+pre {
+  font-size: 0.8em;
+  line-height: 1.25em;
+  font-family: Consolas, monaco, monospace;
+  color: #333;
+  white-space: pre-line;
+  background: #f9f9f9;
+  border-radius: 4px;
+  padding: 5px;
+  display: inline-block; }
+
+.pre-block {
+  white-space: pre;
+  display: block; }
+
+code {
+  font-size: 0.8em;
+  line-height: 1.25em;
+  font-family: Consolas, monaco, monospace; }
+  code .code-o {
+    color: #DE8A00; }
+  code .code-c {
+    color: #803800; }
+  code .code-n {
+    color: #B92F00; }
+
+.batch-g--docs {
+  background: #fff3de;
+  margin-bottom: 30px;
+  padding: 10px 5px 0 5px; }
+  .batch-g--docs [class^="batch-u"] {
+    background: #ffffff;
+    padding: 10px;
+    border-color: #fff3de; }
+
+.batch-g--filled {
+  background: #f9f9f9; }
+  .batch-g--filled [class^="batch-u"] {
+    background: #ddd;
+    font-size: 0.8em; }
 
 .highlight {
   color: #333;
@@ -1043,3 +1045,8 @@ code {
 @media screen and (min-width: 53.75em) {
   .hide-lg {
     display: none; } }
+
+.footer {
+  padding-top: 4.5em;
+  padding-bottom: 4.5em;
+  font-size: 0.8em; }
