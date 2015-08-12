@@ -1,5 +1,50 @@
 // App
 
 .batch-logo {
+	@include media($large-screen) {
+		margin-bottom:0;
+	}
+}
+
+.batch-logo_image {
 	max-width:280px;
+}
+
+.utilities {
+	text-align:center;
+	@include media($large-screen) {
+		text-align:right;
+	}
+}
+
+.utilities_item {
+	padding-bottom:$base-spacing;
+}
+
+.hero-headline {
+	text-align:center;
+	font-size:2.5em;
+	margin:0;
+	padding:$small-spacing;
+	@include media($medium-screen) {
+		padding:$base-spacing $small-spacing;
+	}
+}
+
+.feature-object {
+	text-align:center;
+	padding:0 $base-spacing;
+}
+
+.feature-object_icon {
+	color:$barrel-gold;
+	font-size:5em;
+	@include media($large-screen) {
+		font-size:10em;
+	}
+}
+
+.footer {
+	padding:$xxlarge-spacing 0;
+	font-size: $small-font-size;
 }

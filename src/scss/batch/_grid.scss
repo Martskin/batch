@@ -20,7 +20,7 @@ $unit-sizes : (
 // 3-4, 3-8
 // 5-8
 // 7-8
-@mixin singlebatch($breakpoint:'') {
+@mixin single-batch($breakpoint:'') {
 	@each $key, $unit-size in $unit-sizes {
 		@for $i from 1 to (length($unit-size)+1) {
 			.batch-u#{$breakpoint}-#{$key}-#{nth($unit-size, $i)} {
@@ -48,14 +48,14 @@ $unit-sizes : (
 //Batch units
 
 // Base units
-@include singlebatch();
+@include single-batch();
 
 // Medium screen units
 @include media($medium-screen) {
-	@include singlebatch('-md');
+	@include single-batch('-md');
 }
 
 // Large screen units
 @include media($large-screen) {
-	@include singlebatch('-lg');
+	@include single-batch('-lg');
 }

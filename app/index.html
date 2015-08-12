@@ -10,7 +10,9 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
+    <link href='http://fonts.googleapis.com/css?family=Bitter:400,400italic,700' rel='stylesheet' type='text/css'>
     <link href="assets/css/style.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="icon" type="image/png" href="favicon.png">
 
     <script src="assets/components/modernizr/modernizr.js"></script>
@@ -18,57 +20,103 @@
   <body>
 
     <header class="header" role="banner">
-      <div class="logo">
-        
+      <div class="l-row">
+        <div class="batch-c l-container">
+          <div class="batch-g">
+            <div class="batch-u-1-1 batch-u-lg-1-2">
+                <h1 class="batch-logo"><img class="batch-logo_image" src="assets/img/batch-logo.svg" title="Batch"/></h1>
+            </div>
+            <div class="batch-u-1-1 batch-u-lg-1-2">
+              <ul class="utilities">
+                <li class="utilities_item">
+                  <a href="#link" class="btn btn--small btn--secondary"><i class="fa fa-book"></i> Docs</a>
+                  <a href="https://github.com/Martskin/batch" class="btn btn--small btn--secondary"><i class="fa fa-github"></i> GitHub</a>
+                  <a href="#link" class="btn btn--small btn--secondary"><i class="fa fa-clone"></i> Templates</a>
+                </li>
+                <li class="utilities_item">
+                  <a href="#link" class="btn">Download v1.0 <span class="btn_notes">(SCSS)</span></a>
+                  <a href="#link" class="btn btn--secondary">Download v1.0 <span class="btn_notes">(CSS)</span></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <nav class="nav" role="navigation">
-        
-      </nav>
     </header>
 
     <main class="main" role="main">
 
-    <div class="l-row">
-        <div class="batch-c l-container">
+      <div class="l-row l-row--gold">
+        <div class="l-container">
+            <h2 class="hero-headline">A simple, responsive flexbox grid system.</h2>
+        </div>
+      </div>
+
+      <div class="l-row l-row--amber">
+        <div class="l-container">
           <div class="batch-g">
-            <div class="batch-u-1-1 batch-u-md-1-2">
-                <h1><img class="batch-logo" src="assets/img/batch-logo.svg" title="Batch"/></h1>
+            <div class="batch-u-1-1 batch-u-md-1-3">
+              <ul class="feature-object">
+                <li class="feature-object_icon">
+                  <i class="fa fa-tasks"></i>
+                </li>
+                <li class="feature-object_title">
+                  <h3>Percentage Based Grid</h3>
+                </li>
+                <li class="feature-object_description">
+                  <p>Batch takes advantage of the benifits that flexbox has to offer. Vertical alignment, uniform cell height and no floats!</p>
+                </li>
+              </ul>
             </div>
-            <div class="batch-u-1-1 batch-u-md-1-2">
-              <div class="batch-g">
-                <div class="batch-u-1-1 batch-u-lg-1-3">
-                  <a href="#link" class="btn btn-secondary">Docs</a>
-                </div>
-                <div class="batch-u-1-1 batch-u-lg-1-3">
-                  <a href="https://github.com/Martskin/batch" class="btn btn-secondary">GitHub</a>
-                </div>
-                <div class="batch-u-1-1 batch-u-lg-1-3">
-                  <a href="#link" class="btn btn-secondary">Templates</a>
-                </div>
-              </div>
-              <div class="batch-g">
-                <div class="batch-u-1-1 batch-u-lg-1-2">
-                  <a href="#link" class="btn">Download v1.0 (SCSS)</a>
-                </div>
-                <div class="batch-u-1-1 batch-u-lg-1-2">
-                  <a href="#link" class="btn btn-secondary">Download v1.0 (CSS)</a>
-                </div>
-              </div>
+            <div class="batch-u-1-1 batch-u-md-1-3">
+              <ul class="feature-object">
+                <li class="feature-object_icon">
+                  <i class="fa fa-bolt"></i>
+                </li>
+                <li class="feature-object_title">
+                  <h3>Simple Installation</h3>
+                </li>
+                <li class="feature-object_description">
+                  <p>Download the vanilla <a class="link--light link--underlined" href="#link" target="_blank">CSS</a> or the <a class="link--light link--underlined" href="#link" target="_blank">SCSS</a> source files. Read the <a class="link--light link--underlined" href="#link" target="_blank">installation instructions</a> to add Batch to your project.</p>
+                </li>
+              </ul>
+            </div>
+            <div class="batch-u-1-1 batch-u-md-1-3">
+              <ul class="feature-object">
+                <li class="feature-object_icon">
+                  <i class="fa fa-cubes"></i>
+                </li>
+                <li class="feature-object_title">
+                  <h3>Extendable Units</h3>
+                </li>
+                <li class="feature-object_description">
+                  Add more sizes to the <code>$unit-sizes</code> map to have the <code>single-batch()</code> mixin distill your custom unit classes. Requires <a class="link--light link--underlined" href="http://sass-lang.com/" target="_blank">Sass</a>, <a class="link--light link--underlined" href="http://bourbon.io/" target="_blank">Bourbon</a> and <a class="link--light link--underlined" href="http://neat.bourbon.io/" target="_blank">Neat</a>.
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="l-row l-row--gold">
-        <div class="l-container">
-            <h2>A simple, responsive flexbox grid system.</h2>
+      <div class="l-row l-row--gray">
+        <div class="batch-c l-container">
+          <h2><i class="fa fa-code"></i>  Markup Structure</h2>
+          <pre>
+            <code>&lt;<span class="code-o">div</span> <span class="code-c">class</span>=<span class="code-n">"batch-g"</span>&gt;</code>
+
+            <code>&lt;<span class="code-o">/div</span>&gt;</code>
+
+            <code><span class="code-n">batch-u-1-1</span></code>
+            <code><span class="code-n">batch-u-md-1-2</span></code>
+            <code><span class="code-n">batch-u-lg-1-4</span></code>
+            <code><span class="code-n">"</span>&gt;</code>
+          </pre>
         </div>
       </div>
 
-      <div class="l-row l-row--brown">
+      <div class="l-row">
         <div class="batch-c l-container">
-          <h2>Basic Usage</h2>
+          <h2><i class="fa fa-puzzle-piece"></i> Basic Usage</h2>
           <div class="batch-g batch-g_docs">
             <div class="batch-u-1-3">
                 <pre>
@@ -133,10 +181,8 @@
                 <p>This cell will be <span>100%</span> width on all screens sizes.</p>
             </div>
           </div>
-        </div>
-
-        <div class="batch-c l-container">
-          <h2>Responsive Usage</h2>
+        
+          <h2><i class="fa fa-arrows-h"></i> Responsive Usage</h2>
           <div class="batch-g batch-g_docs">
             <div class="batch-u-1-1 batch-u-md-1-2 batch-u-lg-1-4">
               <pre>
@@ -211,13 +257,20 @@
               <p>This cell will be <span>25%</span> width on <span>desktop</span> size screens.</p>
             </div>
           </div>
+        
+          <h2><i class="fa fa-th"></i> Available Grid Unit Classes</h2>
+        
+          <h2><i class="fa fa-sliders"></i> Available Modifier Classes</h2>
+
         </div>
       </div>
 
     </main>
 
-    <footer class="footer" role="contentinfo">
-
+    <footer class="footer l-row l-row--gray--light" role="contentinfo">
+      <div class="l-container">
+        Batch is created and maintained by <a href="http://www.martinhofmann.com/" target="_blank">Martin Hofmann</a>.
+      </div>
     </footer>
 
     <script src="assets/components/jquery/jquery.min.js"></script>

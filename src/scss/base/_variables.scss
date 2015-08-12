@@ -1,9 +1,11 @@
 // Typography
 $base-font-family: $helvetica;
-$heading-font-family: $base-font-family;
+$heading-font-family: 'Bitter', serif;
+$heading-font-weight: 100;
 
 // Font Sizes
 $base-font-size: 1em;
+$small-font-size: 0.8em;
 
 // Line height
 $base-line-height: 1.5;
@@ -14,6 +16,8 @@ $base-border-radius: 3px;
 $base-spacing: $base-line-height * 1em;
 $small-spacing: $base-spacing / 2;
 $large-spacing: $base-spacing * 2;
+$xlarge-spacing: $base-spacing * 3;
+$xxlarge-spacing: $base-spacing * 3;
 $base-z-index: 0;
 
 // Colors

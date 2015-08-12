@@ -1,7 +1,10 @@
 // Layout
 
 .l-row {
-	padding:$large-spacing $small-spacing;
+	padding:$base-spacing $small-spacing;
+	@include media($medium-screen) {
+		padding:$large-spacing $small-spacing;
+	}
 }
 
 .l-row--amber {
@@ -17,6 +20,14 @@
 .l-row--gold {
 	color:$white;
 	background-color:$barrel-gold;
+}
+
+.l-row--gray {
+	background-color:$light-gray;
+}
+
+.l-row--gray--light {
+	background-color:$lighter-gray;
 }
 
 .l-container {
