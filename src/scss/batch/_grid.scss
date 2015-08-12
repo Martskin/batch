@@ -1,5 +1,8 @@
 // Grid
 
+// Gutter
+$batch-gutter:	10px;
+
 @mixin batch-u {
 	border-width:0 $batch-gutter/2 $batch-gutter;
 	border-style:solid;

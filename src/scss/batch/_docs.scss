@@ -3,7 +3,7 @@
 pre {
 	font-size:0.8em;
 	line-height:1.25em;
-	font-family: Consolas,monaco,monospace; 
+	font-family: $code-font-family;
 	color:$dark-gray;
 	white-space: pre-line;
 	background:$lighter-gray;
@@ -12,10 +12,15 @@ pre {
 	display: inline-block;
 }
 
+.pre-block {
+	white-space: pre;
+	display:block;
+}
+
 code {
 	font-size:0.8em;
 	line-height:1.25em;
-	font-family: Consolas,monaco,monospace; 
+	font-family: $code-font-family; 
 	.code-o {
 		color:$code-object-color;
 	}
@@ -30,19 +35,20 @@ code {
 .batch-g_docs {
 	background:$barrel-gold-light;
 	margin-bottom:30px;
+	padding: $batch-gutter $batch-gutter/2 0 $batch-gutter/2;
 	[class^="batch-u"] {
 		background:#ffffff;
 		padding:$batch-gutter;
 		border-color:$barrel-gold-light;
-		p {
-			color: $dark-gray;
-			font-size: 0.75em;
-			line-height: 1.25em;
-			margin-bottom: 10px;
-			text-align: left;
-			span {
-				font-weight: bold;
-			}
-		}
+		// p {
+		// 	color: $dark-gray;
+		// 	font-size: 0.75em;
+		// 	line-height: 1.25em;
+		// 	margin-bottom: 10px;
+		// 	text-align: left;
+		// 	span {
+		// 		font-weight: bold;
+		// 	}
+		// }
 	}
 }

@@ -790,7 +790,7 @@ html {
 pre {
   font-size: 0.8em;
   line-height: 1.25em;
-  font-family: Consolas,monaco,monospace;
+  font-family: Consolas, monaco, monospace;
   color: #333;
   white-space: pre-line;
   background: #f9f9f9;
@@ -798,10 +798,14 @@ pre {
   padding: 5px;
   display: inline-block; }
 
+.pre-block {
+  white-space: pre;
+  display: block; }
+
 code {
   font-size: 0.8em;
   line-height: 1.25em;
-  font-family: Consolas,monaco,monospace; }
+  font-family: Consolas, monaco, monospace; }
   code .code-o {
     color: #DE8A00; }
   code .code-c {
@@ -811,19 +815,12 @@ code {
 
 .batch-g_docs {
   background: #fff3de;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  padding: 10px 5px 0 5px; }
   .batch-g_docs [class^="batch-u"] {
     background: #ffffff;
     padding: 10px;
     border-color: #fff3de; }
-    .batch-g_docs [class^="batch-u"] p {
-      color: #333;
-      font-size: 0.75em;
-      line-height: 1.25em;
-      margin-bottom: 10px;
-      text-align: left; }
-      .batch-g_docs [class^="batch-u"] p span {
-        font-weight: bold; }
 
 .btn, button {
   -webkit-appearance: none;
@@ -967,6 +964,82 @@ code {
     .feature-object_icon {
       font-size: 10em; } }
 
+.comment {
+  opacity: 0.5;
+  font-family: Consolas, monaco, monospace; }
+
 .footer {
   padding: 4.5em 0;
   font-size: 0.8em; }
+
+.highlight {
+  color: #333;
+  font-size: 0.75em;
+  line-height: 1.25em;
+  margin-bottom: 10px;
+  text-align: left; }
+  .highlight span {
+    font-weight: bold; }
+
+.highlight-mobile span {
+  font-weight: bold; }
+@media screen and (min-width: 40em) {
+  .highlight-mobile {
+    color: rgba(51, 51, 51, 0.4); }
+    .highlight-mobile span {
+      font-weight: normal; } }
+
+.highlight-tablet {
+  color: rgba(51, 51, 51, 0.4); }
+  .highlight-tablet span {
+    font-weight: normal; }
+  @media screen and (min-width: 40em) {
+    .highlight-tablet {
+      color: #333; }
+      .highlight-tablet span {
+        font-weight: bold; } }
+  @media screen and (min-width: 53.75em) {
+    .highlight-tablet {
+      color: rgba(51, 51, 51, 0.4); }
+      .highlight-tablet span {
+        font-weight: normal; } }
+
+.highlight-desktop {
+  color: rgba(51, 51, 51, 0.4); }
+  .highlight-desktop span {
+    font-weight: normal; }
+  @media screen and (min-width: 53.75em) {
+    .highlight-desktop {
+      color: #333; }
+      .highlight-desktop span {
+        font-weight: bold; } }
+
+@media screen and (min-width: 40em) {
+  .show-sm {
+    display: none; } }
+
+@media screen and (max-width: 40em)  {
+  .hide-sm {
+    display: none; } }
+
+@media screen and (max-width: 40em)  {
+  .show-md {
+    display: none; } }
+@media screen and (min-width: 53.75em) {
+  .show-md {
+    display: none; } }
+
+@media screen and (min-width: 40em) and (max-width: 53.75em)  {
+  .hide-md {
+    display: none; } }
+
+@media screen and (max-width: 40em)  {
+  .show-lg {
+    display: none; } }
+@media screen and (min-width: 40em) and (max-width: 53.75em)  {
+  .show-lg {
+    display: none; } }
+
+@media screen and (min-width: 53.75em) {
+  .hide-lg {
+    display: none; } }
