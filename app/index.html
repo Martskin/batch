@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
-    <link href='http://fonts.googleapis.com/css?family=Bitter:400,400italic,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:500' rel='stylesheet' type='text/css'>
     <link href="assets/css/style.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="icon" type="image/png" href="favicon.png">
@@ -46,7 +46,7 @@
 
     <main class="main" role="main">
 
-      <div class="l-row l-row--gold">
+      <div class="l-row l-row--gold l-row--border-top">
         <div class="l-container">
             <h2 class="hero-headline">A simple, responsive flexbox grid system.</h2>
         </div>
@@ -64,17 +64,17 @@
                   <h3>Percentage Based Grid</h3>
                 </li>
                 <li class="feature-object_description">
-                  <p>Batch takes advantage of the benifits that flexbox has to offer. Vertical alignment, uniform cell height and no floats!</p>
+                  <p>Batch takes advantage of the flexbox layout mode. Providing vertical alignment, uniform cell height and no floats!</p>
                 </li>
               </ul>
             </div>
             <div class="batch-u-1-1 batch-u-md-1-3">
               <ul class="feature-object">
                 <li class="feature-object_icon">
-                  <i class="fa fa-bolt"></i>
+                  <i class="fa fa-plug"></i>
                 </li>
                 <li class="feature-object_title">
-                  <h3>Simple Installation</h3>
+                  <h3>Easy To Use</h3>
                 </li>
                 <li class="feature-object_description">
                   <p>Download the vanilla <a class="link--light link--underlined" href="#link" target="_blank">CSS</a> or the <a class="link--light link--underlined" href="#link" target="_blank">SCSS</a> source files. Read the <a class="link--light link--underlined" href="#link" target="_blank">installation instructions</a> to add Batch to your project.</p>
@@ -90,7 +90,7 @@
                   <h3>Extendable Units</h3>
                 </li>
                 <li class="feature-object_description">
-                  Add more sizes to the <code>$unit-sizes</code> map to have the <code>single-batch()</code> mixin distill your custom unit classes. Requires <a class="link--light link--underlined" href="http://sass-lang.com/" target="_blank">Sass</a>, <a class="link--light link--underlined" href="http://bourbon.io/" target="_blank">Bourbon</a> and <a class="link--light link--underlined" href="http://neat.bourbon.io/" target="_blank">Neat</a>.
+                  <a class="link--light link--underlined" href="#link" target="_blank">Add more sizes</a> to the <code>$unit-sizes</code> map to have the <code>single-batch()</code> mixin distill your custom unit classes. Requires <a class="link--light link--underlined" href="http://sass-lang.com/" target="_blank">Sass</a>, <a class="link--light link--underlined" href="http://bourbon.io/" target="_blank">Bourbon</a> and <a class="link--light link--underlined" href="http://neat.bourbon.io/" target="_blank">Neat</a>.
                 </li>
               </ul>
             </div>
@@ -101,30 +101,33 @@
       <div class="l-row l-row--gray">
         <div class="l-container">
           <h2><i class="fa fa-code"></i>  Markup Structure</h2>
+          <p>The markup below will result in a grid with one row and 3 columns.</p>
           <p class="comment">&lt;!-- Example Markup Code --&gt;</p>
 <pre class="pre-block">
-  <code>&lt;<span class="code-o">div</span> <span class="code-c">class</span>=<span class="code-n">"batch-g"</span>&gt;</code>
-   <code>&lt;<span class="code-o">div</span> <span class="code-c">class</span>=<span class="code-n">"batch-u-1-3"</span>&gt;</code>
-    Grid Unit Cell 1
-   <code>&lt;<span class="code-o">/div</span>&gt;</code>
-   <code>&lt;<span class="code-o">div</span> <span class="code-c">class</span>=<span class="code-n">"batch-u-1-3"</span>&gt;</code>
-    Grid Unit Cell 2
-   <code>&lt;<span class="code-o">/div</span>&gt;</code>
-   <code>&lt;<span class="code-o">div</span> <span class="code-c">class</span>=<span class="code-n">"batch-u-1-3"</span>&gt;</code>
-    Grid Unit Cell 3
-   <code>&lt;<span class="code-o">/div</span>&gt;</code>
-  <code>&lt;<span class="code-o">/div</span>&gt;</code>
+  <code>
+    &lt;<span class="code-o">div</span> <span class="code-c">class</span>=<span class="code-n">"batch-g"</span>&gt;
+     &lt;<span class="code-o">div</span> <span class="code-c">class</span>=<span class="code-n">"batch-u-1-3"</span>&gt;
+      Grid Cell Unit 1
+     &lt;<span class="code-o">/div</span>&gt;
+     &lt;<span class="code-o">div</span> <span class="code-c">class</span>=<span class="code-n">"batch-u-1-3"</span>&gt;
+      Grid Cell Unit 2
+     &lt;<span class="code-o">/div</span>&gt;
+     &lt;<span class="code-o">div</span> <span class="code-c">class</span>=<span class="code-n">"batch-u-1-3"</span>&gt;
+      Grid Cell Unit 3
+     &lt;<span class="code-o">/div</span>&gt;
+    &lt;<span class="code-o">/div</span>&gt;
+  </code>
 </pre>
           <p class="comment">&lt;!-- Example Markup Result --&gt;</p>
-          <div class="batch-g">
+          <div class="batch-g batch-g--gutter batch-g--docs">
            <div class="batch-u-1-3">
-            Grid Unit Cell 1
+            Grid Cell Unit 1
            </div>
            <div class="batch-u-1-3">
-            Grid Unit Cell 2
+            Grid Cell Unit 2
            </div>
            <div class="batch-u-1-3">
-            Grid Unit Cell 3
+            Grid Cell Unit 3
            </div>
           </div>
         </div>
@@ -133,48 +136,49 @@
       <div class="l-row">
         <div class="batch-cxxx l-container">
           <h2><i class="fa fa-puzzle-piece"></i> Basic Usage</h2>
-          <div class="batch-g batch-g--docs">
+          <p>This example demonstrates how to set the width of a cell at <span class="strong">all</span> screen sizes.</p>
+          <div class="batch-g batch-g--gutter batch-g--docs">
             <div class="batch-u-1-3">
                 <pre>
                   <code>&lt;<span class="code-o">div</span> <span class="code-c">class</span>=<span class="code-n">"batch-u-1-3"</span>&gt;</code>
                 </pre>
-                <p class="highlight">This cell is <span>33%</span> width on all screen sizes.</p>
+                <p class="highlight">This cell is <span class="strong">33%</span> width on all screen sizes.</p>
             </div>
             <div class="batch-u-2-3">
                 <pre>
                   <code>&lt;<span class="code-o">div</span> <span class="code-c">class</span>=<span class="code-n">"batch-u-2-3"</span>&gt;</code>
                 </pre>
-                <p class="highlight">This cell is <span>66%</span> width on all screen sizes.</p>
+                <p class="highlight">This cell is <span class="strong">66%</span> width on all screen sizes.</p>
             </div>
             <div class="batch-u-1-4">
                 <pre>
                   <code>&lt;<span class="code-o">div</span> <span class="code-c">class</span>=<span class="code-n">"batch-u-1-4"</span>&gt;</code>
                 </pre>
-                <p class="highlight">This cell is <span>25%</span> width on all screen sizes.</p>
+                <p class="highlight">This cell is <span class="strong">25%</span> width on all screen sizes.</p>
             </div>
             <div class="batch-u-1-2">
                 <pre>
                   <code>&lt;<span class="code-o">div</span> <span class="code-c">class</span>=<span class="code-n">"batch-u-1-2"</span>&gt;</code>
                 </pre>
-                <p class="highlight">This cell is <span>50%</span> width on all screen sizes.</p>
+                <p class="highlight">This cell is <span class="strong">50%</span> width on all screen sizes.</p>
             </div>
             <div class="batch-u-1-4">
                 <pre>
                   <code>&lt;<span class="code-o">div</span> <span class="code-c">class</span>=<span class="code-n">"batch-u-1-4"</span>&gt;</code>
                 </pre>
-                <p class="highlight">This cell is <span>25%</span> width on all screen sizes.</p>
+                <p class="highlight">This cell is <span class="strong">25%</span> width on all screen sizes.</p>
             </div>
             <div class="batch-u-3-8">
                 <pre>
                   <code>&lt;<span class="code-o">div</span> <span class="code-c">class</span>=<span class="code-n">"batch-u-3-8"</span>&gt;</code>
                 </pre>
-                <p class="highlight">This cell is <span>37.5%</span> width on all screen sizes.</p>
+                <p class="highlight">This cell is <span class="strong">37.5%</span> width on all screen sizes.</p>
             </div>
             <div class="batch-u-5-8">
                 <pre>
                   <code>&lt;<span class="code-o">div</span> <span class="code-c">class</span>=<span class="code-n">"batch-u-5-8"</span>&gt;</code>
                 </pre>
-                <p class="highlight">This cell is <span>62.5%</span> width on all screen sizes.</p>
+                <p class="highlight">This cell is <span class="strong">62.5%</span> width on all screen sizes.</p>
             </div>
             <div class="batch-u-1-8">
                 <pre>
@@ -182,24 +186,25 @@
                   <code><span class="code-n">batch-u-1-8</span></code>
                   <code><span class="code-n">"</span>&gt;</code>
                 </pre>
-                <p class="highlight">This cell is <span>12.5%</span> width on all screen sizes.</p>
+                <p class="highlight">This cell is <span class="strong">12.5%</span> width on all screen sizes.</p>
             </div>
             <div class="batch-u-7-8">
                 <pre>
                   <code>&lt;<span class="code-o">div</span> <span class="code-c">class</span>=<span class="code-n">"batch-u-7-8"</span>&gt;</code>
                 </pre>
-                <p class="highlight">This cell is <span>87.5%</span> width on all screen sizes.</p>
+                <p class="highlight">This cell is <span class="strong">87.5%</span> width on all screen sizes.</p>
             </div>
             <div class="batch-u-1-1">
                 <pre>
                   <code>&lt;<span class="code-o">div</span> <span class="code-c">class</span>=<span class="code-n">"batch-u-1-1"</span>&gt;</code>
                 </pre>
-                <p class="highlight">This cell is <span>100%</span> width on all screen sizes.</p>
+                <p class="highlight">This cell is <span class="strong">100%</span> width on all screen sizes.</p>
             </div>
           </div>
         
           <h2><i class="fa fa-arrows-h"></i> Responsive Usage</h2>
-          <div class="batch-g batch-g--docs">
+          <p>This example demonstrates how to set the width of a cell at <span class="strong">mobile</span> ( <code><span class="code-n">batch-u-</span></code> ), <span class="strong">tablet</span> ( <code><span class="code-n">batch-u-md-</span></code> ) and <span class="strong">desktop</span> ( <code><span class="code-n">batch-u-lg-</span></code> ) screen sizes.</p>
+          <div class="batch-g batch-g--gutter batch-g--docs">
             <div class="batch-u-1-1 batch-u-md-1-2 batch-u-lg-1-4">
               <pre>
                 <code>&lt;<span class="code-o">div</span> <span class="code-c">class</span>=<span class="code-n">"</span></code>
@@ -208,9 +213,9 @@
                 <code><span class="code-n">batch-u-lg-1-4</span></code>
                 <code><span class="code-n">"</span>&gt;</code>
               </pre>
-              <p class="highlight highlight-mobile">This cell <span class="show-sm">is</span><span class="hide-sm">will be</span> <span>100%</span> width on <span>mobile</span> size screens.</p>
-              <p class="highlight highlight-tablet">This cell <span class="show-md">is</span><span class="hide-md">will be</span> <span>50%</span> width on <span>tablet</span> size screens.</p>
-              <p class="highlight highlight-desktop">This cell <span class="show-lg">is</span><span class="hide-lg">will be</span> <span>25%</span> width on <span>desktop</span> size screens.</p>
+              <p class="highlight highlight-mobile">This cell <span class="show-sm">is</span><span class="hide-sm">will be</span> <span class="strong">100%</span> width on <span class="strong">mobile</span> size screens.</p>
+              <p class="highlight highlight-tablet">This cell <span class="show-md">is</span><span class="hide-md">will be</span> <span class="strong">50%</span> width on <span class="strong">tablet</span> size screens.</p>
+              <p class="highlight highlight-desktop">This cell <span class="show-lg">is</span><span class="hide-lg">will be</span> <span class="strong">25%</span> width on <span class="strong">desktop</span> size screens.</p>
             </div>
             <div class="batch-u-1-1 batch-u-md-1-2 batch-u-lg-1-4">
                <pre>
@@ -220,9 +225,9 @@
                 <code><span class="code-n">batch-u-lg-1-4</span></code>
                 <code><span class="code-n">"</span>&gt;</code>
               </pre>
-              <p class="highlight highlight-mobile">This cell <span class="show-sm">is</span><span class="hide-sm">will be</span> <span>100%</span> width on <span>mobile</span> size screens.</p>
-              <p class="highlight highlight-tablet">This cell <span class="show-md">is</span><span class="hide-md">will be</span> <span>50%</span> width on <span>tablet</span> size screens.</p>
-              <p class="highlight highlight-desktop">This cell <span class="show-lg">is</span><span class="hide-lg">will be</span> <span>25%</span> width on <span>desktop</span> size screens.</p>
+              <p class="highlight highlight-mobile">This cell <span class="show-sm">is</span><span class="hide-sm">will be</span> <span class="strong">100%</span> width on <span class="strong">mobile</span> size screens.</p>
+              <p class="highlight highlight-tablet">This cell <span class="show-md">is</span><span class="hide-md">will be</span> <span class="strong">50%</span> width on <span class="strong">tablet</span> size screens.</p>
+              <p class="highlight highlight-desktop">This cell <span class="show-lg">is</span><span class="hide-lg">will be</span> <span class="strong">25%</span> width on <span class="strong">desktop</span> size screens.</p>
             </div>
             <div class="batch-u-1-1 batch-u-md-1-2 batch-u-lg-1-4">
                <pre>
@@ -232,9 +237,9 @@
                 <code><span class="code-n">batch-u-lg-1-4</span></code>
                 <code><span class="code-n">"</span>&gt;</code>
               </pre>
-              <p class="highlight highlight-mobile">This cell <span class="show-sm">is</span><span class="hide-sm">will be</span> <span>100%</span> width on <span>mobile</span> size screens.</p>
-              <p class="highlight highlight-tablet">This cell <span class="show-md">is</span><span class="hide-md">will be</span> <span>50%</span> width on <span>tablet</span> size screens.</p>
-              <p class="highlight highlight-desktop">This cell <span class="show-lg">is</span><span class="hide-lg">will be</span> <span>25%</span> width on <span>desktop</span> size screens.</p>
+              <p class="highlight highlight-mobile">This cell <span class="show-sm">is</span><span class="hide-sm">will be</span> <span class="strong">100%</span> width on <span class="strong">mobile</span> size screens.</p>
+              <p class="highlight highlight-tablet">This cell <span class="show-md">is</span><span class="hide-md">will be</span> <span class="strong">50%</span> width on <span class="strong">tablet</span> size screens.</p>
+              <p class="highlight highlight-desktop">This cell <span class="show-lg">is</span><span class="hide-lg">will be</span> <span class="strong">25%</span> width on <span class="strong">desktop</span> size screens.</p>
             </div>
             <div class="batch-u-1-1 batch-u-md-1-2 batch-u-lg-1-4">
               <pre>
@@ -244,9 +249,9 @@
                 <code><span class="code-n">batch-u-lg-1-4</span></code>
                 <code><span class="code-n">"</span>&gt;</code>
               </pre>
-              <p class="highlight highlight-mobile">This cell <span class="show-sm">is</span><span class="hide-sm">will be</span> <span>100%</span> width on <span>mobile</span> size screens.</p>
-              <p class="highlight highlight-tablet">This cell <span class="show-md">is</span><span class="hide-md">will be</span> <span>50%</span> width on <span>tablet</span> size screens.</p>
-              <p class="highlight highlight-desktop">This cell <span class="show-lg">is</span><span class="hide-lg">will be</span> <span>25%</span> width on <span>desktop</span> size screens.</p>
+              <p class="highlight highlight-mobile">This cell <span class="show-sm">is</span><span class="hide-sm">will be</span> <span class="strong">100%</span> width on <span class="strong">mobile</span> size screens.</p>
+              <p class="highlight highlight-tablet">This cell <span class="show-md">is</span><span class="hide-md">will be</span> <span class="strong">50%</span> width on <span class="strong">tablet</span> size screens.</p>
+              <p class="highlight highlight-desktop">This cell <span class="show-lg">is</span><span class="hide-lg">will be</span> <span class="strong">25%</span> width on <span class="strong">desktop</span> size screens.</p>
             </div>
             <div class="batch-u-1-1 batch-u-md-1-2 batch-u-lg-1-4">
               <pre>
@@ -256,9 +261,9 @@
                 <code><span class="code-n">batch-u-lg-1-4</span></code>
                 <code><span class="code-n">"</span>&gt;</code>
               </pre>
-              <p class="highlight highlight-mobile">This cell <span class="show-sm">is</span><span class="hide-sm">will be</span> <span>100%</span> width on <span>mobile</span> size screens.</p>
-              <p class="highlight highlight-tablet">This cell <span class="show-md">is</span><span class="hide-md">will be</span> <span>50%</span> width on <span>tablet</span> size screens.</p>
-              <p class="highlight highlight-desktop">This cell <span class="show-lg">is</span><span class="hide-lg">will be</span> <span>25%</span> width on <span>desktop</span> size screens.</p>
+              <p class="highlight highlight-mobile">This cell <span class="show-sm">is</span><span class="hide-sm">will be</span> <span class="strong">100%</span> width on <span class="strong">mobile</span> size screens.</p>
+              <p class="highlight highlight-tablet">This cell <span class="show-md">is</span><span class="hide-md">will be</span> <span class="strong">50%</span> width on <span class="strong">tablet</span> size screens.</p>
+              <p class="highlight highlight-desktop">This cell <span class="show-lg">is</span><span class="hide-lg">will be</span> <span class="strong">25%</span> width on <span class="strong">desktop</span> size screens.</p>
             </div>
             <div class="batch-u-1-1 batch-u-md-1-2 batch-u-lg-1-4">
               <pre>
@@ -268,108 +273,152 @@
                 <code><span class="code-n">batch-u-lg-1-4</span></code>
                 <code><span class="code-n">"</span>&gt;</code>
               </pre>
-              <p class="highlight highlight-mobile">This cell <span class="show-sm">is</span><span class="hide-sm">will be</span> <span>100%</span> width on <span>mobile</span> size screens.</p>
-              <p class="highlight highlight-tablet">This cell <span class="show-md">is</span><span class="hide-md">will be</span> <span>50%</span> width on <span>tablet</span> size screens.</p>
-              <p class="highlight highlight-desktop">This cell <span class="show-lg">is</span><span class="hide-lg">will be</span> <span>25%</span> width on <span>desktop</span> size screens.</p>
+              <p class="highlight highlight-mobile">This cell <span class="show-sm">is</span><span class="hide-sm">will be</span> <span class="strong">100%</span> width on <span class="strong">mobile</span> size screens.</p>
+              <p class="highlight highlight-tablet">This cell <span class="show-md">is</span><span class="hide-md">will be</span> <span class="strong">50%</span> width on <span class="strong">tablet</span> size screens.</p>
+              <p class="highlight highlight-desktop">This cell <span class="show-lg">is</span><span class="hide-lg">will be</span> <span class="strong">25%</span> width on <span class="strong">desktop</span> size screens.</p>
             </div>
           </div>
-        
-          <h2><i class="fa fa-th"></i> Available Grid Unit Cell Classes</h2>
 
-          <div class="batch-g">
-            <div class="batch-u-1-8">
-              <code><span class="code-n">1-8</span></code>
-            </div>
-            <div class="batch-u-7-8">
-              <div class="batch-g batch-g--filled">
-                <div class="batch-u-1-8">
-                  12.5%
+          <section class="l-section">
+
+            <h2><i class="fa fa-th"></i> Grid Cell Unit Classes</h2>
+            <p>Default available cell sizes. 3rds, 4ths and 8ths.</p>
+            <div class="batch-g batch-g--gutter batch-g--dl">
+              <div class="batch-u-1-8">
+                <code><span class="code-n">1-1</span></code>
+              </div>
+              <div class="batch-u-7-8">
+                <div class="batch-g batch-g--padded batch-g--filled">
+                  <div class="batch-u-1-1">
+                    100%
+                  </div>
+                </div>
+              </div>
+              <div class="batch-u-1-8">
+                <code><span class="code-n">1-2</span></code>
+              </div>
+              <div class="batch-u-7-8">
+                <div class="batch-g batch-g--padded batch-g--filled">
+                  <div class="batch-u-1-2">
+                    50%
+                  </div>
+                </div>
+              </div>
+              <div class="batch-u-1-8">
+                <code><span class="code-n">1-3</span></code>
+              </div>
+              <div class="batch-u-7-8">
+                <div class="batch-g batch-g--padded batch-g--filled">
+                  <div class="batch-u-1-3">
+                    33.3%
+                  </div>
+                </div>
+              </div>
+              <div class="batch-u-1-8">
+                <code><span class="code-n">1-4</span></code>
+              </div>
+              <div class="batch-u-7-8">
+                <div class="batch-g batch-g--padded batch-g--filled">
+                  <div class="batch-u-1-4">
+                    25%
+                  </div>
+                </div>
+              </div>
+              <div class="batch-u-1-8">
+                <code><span class="code-n">1-8</span></code>
+              </div>
+              <div class="batch-u-7-8">
+                <div class="batch-g batch-g--padded batch-g--filled">
+                  <div class="batch-u-1-8">
+                    12.5%
+                  </div>
+                </div>
+              </div>
+              <div class="batch-u-1-8">
+                <code><span class="code-n">2-3</span></code>
+              </div>
+              <div class="batch-u-7-8">
+                <div class="batch-g batch-g--padded batch-g--filled">
+                  <div class="batch-u-2-3">
+                    66.6%
+                  </div>
+                </div>
+              </div>
+              <div class="batch-u-1-8">
+                <code><span class="code-n">3-4</span></code>
+              </div>
+              <div class="batch-u-7-8">
+                <div class="batch-g batch-g--padded batch-g--filled">
+                  <div class="batch-u-3-4">
+                    75%
+                  </div>
+                </div>
+              </div>
+              <div class="batch-u-1-8">
+                <code><span class="code-n">3-8</span></code>
+              </div>
+              <div class="batch-u-7-8">
+                <div class="batch-g batch-g--padded batch-g--filled">
+                  <div class="batch-u-3-8">
+                    37.5%
+                  </div>
+                </div>
+              </div>
+              <div class="batch-u-1-8">
+                <code><span class="code-n">5-8</span></code>
+              </div>
+              <div class="batch-u-7-8">
+                <div class="batch-g batch-g--padded batch-g--filled">
+                  <div class="batch-u-5-8">
+                    62.5%
+                  </div>
+                </div>
+              </div>
+              <div class="batch-u-1-8">
+                <code><span class="code-n">7-8</span></code>
+              </div>
+              <div class="batch-u-7-8">
+                <div class="batch-g batch-g--padded batch-g--filled">
+                  <div class="batch-u-7-8">
+                    87.5%
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="batch-u-1-8">
-              <code><span class="code-n">3-8</span></code>
-            </div>
-            <div class="batch-u-7-8">
-              <div class="batch-g batch-g--filled">
-                <div class="batch-u-3-8">
-                  37.5%
-                </div>
-              </div>
-            </div>
-            <div class="batch-u-1-8">
-              <code><span class="code-n">5-8</span></code>
-            </div>
-            <div class="batch-u-7-8">
-              <div class="batch-g batch-g--filled">
-                <div class="batch-u-5-8">
-                  62.5%
-                </div>
-              </div>
-            </div>
-            <div class="batch-u-1-8">
-              <code><span class="code-n">7-8</span></code>
-            </div>
-            <div class="batch-u-7-8">
-              <div class="batch-g batch-g--filled">
-                <div class="batch-u-7-8">
-                  87.5%
-                </div>
-              </div>
-            </div>
-            <div class="batch-u-1-8">
-              <code><span class="code-n">1-1</span></code>
-            </div>
-            <div class="batch-u-7-8">
-              <div class="batch-g batch-g--filled">
-                <div class="batch-u-1-1">
-                  100%
-                </div>
-              </div>
-            </div>
-            <div class="batch-u-1-8">
-              <code><span class="code-n">1-2</span></code>
-            </div>
-            <div class="batch-u-7-8">
-              <div class="batch-g batch-g--filled">
-                <div class="batch-u-1-2">
-                  50%
-                </div>
-              </div>
-            </div>
-            <div class="batch-u-1-8">
-              <code><span class="code-n">1-4</span></code>
-            </div>
-            <div class="batch-u-7-8">
-              <div class="batch-g batch-g--filled">
-                <div class="batch-u-1-4">
-                  25%
-                </div>
-              </div>
-            </div>
-            <div class="batch-u-1-8">
-              <code><span class="code-n">1-3</span></code>
-            </div>
-            <div class="batch-u-7-8">
-              <div class="batch-g batch-g--filled">
-                <div class="batch-u-1-3">
-                  33.3%
-                </div>
-              </div>
-            </div>
-            <div class="batch-u-1-8">
-              <code><span class="code-n">2-3</span></code>
-            </div>
-            <div class="batch-u-7-8">
-              <div class="batch-g batch-g--filled">
-                <div class="batch-u-2-3">
-                  66.6%
-                </div>
-              </div>
-            </div>
-          </div>
+
+            <p>Create custom unit sizes by adding to the <code>$unit-sizes</code> map in the <a href="#link">SCSS source files</a>.</p>
+<pre class="pre-block">
+  <code>
+    <span class="comment">
+      // We'll loop through $unit-sizes map to distill the cell classes.
+      // The key is the numerator and then we
+      // loop through the value array for each denominator.
+      // The key/value determines the name and is used to calculate the width percentage.
+      // Default sizes. 3rds, 4ths and 8ths:
+      // 1-1, 1-2, 1-3, 1-4, 1-8
+      // 2-3
+      // 3-4, 3-8
+      // 5-8
+      // 7-8
+    </span>
+
+    <span class="code-o">$unit-sizes</span> : (
+      <span class="code-n">1</span> : (<span class="code-n">1</span>, <span class="code-n">2</span>, <span class="code-n">3</span>, <span class="code-n">4</span>, <span class="code-n">8</span>),
+      <span class="code-n">2</span> : (<span class="code-n">3</span>),
+      <span class="code-n">3</span> : (<span class="code-n">4</span>, <span class="code-n">8</span>),
+      <span class="code-n">5</span> : (<span class="code-n">8</span>),
+      <span class="code-n">7</span> : (<span class="code-n">8</span>)
+    );
+  </code>
+</pre>
+
+          </section>
         
-          <h2><i class="fa fa-sliders"></i> Available Modifier Classes</h2>
+          <section class="l-object">
+
+            <h2><i class="fa fa-sliders"></i> Modifier Classes</h2>
+
+          </section>
 
         </div>
       </div>

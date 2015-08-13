@@ -26,8 +26,9 @@
 	font-size:2.5em;
 	margin:0;
 	padding:$small-spacing;
+	text-shadow:0px 2px 0px rgba($dark-gray, 0.1);
 	@include media($medium-screen) {
-		padding:$base-spacing $small-spacing;
+		padding:$large-spacing $small-spacing;
 	}
 }
 
@@ -38,9 +39,9 @@
 
 .feature-object_icon {
 	color:$barrel-gold;
-	font-size:5em;
+	font-size:4em;
 	@include media($large-screen) {
-		font-size:8em;
+		font-size:7em;
 	}
 }
 
@@ -83,7 +84,7 @@ code {
 
 .batch-g--docs {
 	background:$barrel-gold-light;
-	margin-bottom:30px;
+	margin:0 0 $medium-spacing;
 	padding: $batch-gutter $batch-gutter/2 0 $batch-gutter/2;
 	[class^="batch-u"] {
 		background:#ffffff;
@@ -100,6 +101,15 @@ code {
 	}
 }
 
+.batch-g--dl {
+	margin:0 0 $medium-spacing;
+	> [class^="batch-u"] {
+		&:nth-child(odd) {
+			text-align: right;
+		}
+	}
+}
+
 // Utility Classes
 .highlight {
 	color: $dark-gray;
@@ -107,50 +117,51 @@ code {
 	line-height: 1.25em;
 	margin-bottom: 10px;
 	text-align: left;
-	span {
-		font-weight: bold;
-	}
+}
+
+.strong {
+	font-weight: bold;
 }
 
 .highlight-mobile {
-	span {
+	.strong {
 		font-weight: bold;
 	}
 	@include media($medium-screen) {
-		color:transparentize($dark-gray, 0.6);
-		span {
+		color:rgba($dark-gray, 0.6);
+		.strong {
 			font-weight: normal;
 		}
 	}
 }
 
 .highlight-tablet {
-	color:transparentize($dark-gray, 0.6);
-	span {
+	color:rgba($dark-gray, 0.6);
+	.strong {
 		font-weight: normal;
 	}
 	@include media($medium-screen) {
 		color:$dark-gray;
-		span {
+		.strong {
 			font-weight: bold;
 		}
 	}
 	@include media($large-screen) {
-		color:transparentize($dark-gray, 0.6);
-		span {
+		color:rgba($dark-gray, 0.6);
+		.strong {
 			font-weight: normal;
 		}
 	}
 }
 
 .highlight-desktop {
-	color:transparentize($dark-gray, 0.6);
-	span {
+	color:rgba($dark-gray, 0.6);
+	.strong {
 		font-weight: normal;
 	}
 	@include media($large-screen) {
 		color:$dark-gray;
-		span {
+		.strong {
 			font-weight: bold;
 		}
 	}

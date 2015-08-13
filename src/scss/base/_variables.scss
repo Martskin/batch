@@ -1,7 +1,7 @@
 // Typography
 $base-font-family: $helvetica;
-$heading-font-family: 'Bitter', serif;
-$heading-font-weight: 100;
+$heading-font-family: 'Raleway', sans-serif;
+$heading-font-weight: 500;
 $code-font-family: Consolas,monaco,monospace;
 
 // Font Sizes
@@ -16,6 +16,7 @@ $heading-line-height: 1.2;
 $base-border-radius: 3px;
 $base-spacing: $base-line-height * 1em;
 $small-spacing: $base-spacing / 2;
+$medium-spacing: $base-spacing * 1.5;
 $large-spacing: $base-spacing * 2;
 $xlarge-spacing: $base-spacing * 3;
 $xxlarge-spacing: $base-spacing * 3;
@@ -27,10 +28,10 @@ $dark-gray: #333;
 $medium-gray: #dfdfdf;
 $light-gray: #ddd;
 $lighter-gray: #f9f9f9;
-$barrel-amber: #B92F00;
-$barrel-brown: #803800;
-$barrel-gold: #DE8A00;
-$barrel-gold-light: lighten($barrel-gold, 50%);
+$barrel-amber: #BF3100;
+$barrel-green: #8EA604;
+$barrel-gold: #EC9F05;
+$barrel-gold-light: lighten($barrel-gold, 45%);
 $white:	#ffffff;
 
 // Doc Colors
@@ -38,13 +39,13 @@ $white:	#ffffff;
 // $doc-gray-medium: #dfdfdf;
 // $doc-gray-light: #f9f9f9;
 $code-name-color: $barrel-amber;
-$code-class-color: $barrel-brown;
+$code-class-color: $barrel-green;
 $code-object-color: $barrel-gold;
 
 // Font Colors
 $base-background-color: #fff;
 $base-font-color: $dark-gray;
-$action-color: $barrel-amber;
+$action-color: $barrel-green;
 
 // Border
 $base-border-color: $light-gray;
