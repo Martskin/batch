@@ -26,11 +26,21 @@ A simple, responsive, flexbox grid system.
 
 ![basic-usage](https://cloud.githubusercontent.com/assets/3717760/9275606/3f007484-426c-11e5-9b05-94671aaaf562.png)
 
-##Documentation (Coming Soon)
-[Batch Documentation](https://martskin.github.io/batch)
+##Requires Bourbon and Neat
+
+Import Batch after [Bourbon](http://bourbon.io/) and [Neat](http://neat.bourbon.io/) in your main manifest file
+
+```ruby
+	@import "bourbon";
+    @import "neat";
+    @import "_batch.scss";
+```
+
+##Documentation
+[Batch Documentation (Coming Soon!)](https://martskin.github.io/batch)
 
 
-###Build
+###Docs Build
 ``npm install``
 
 ``gulp``

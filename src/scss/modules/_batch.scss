@@ -44,7 +44,7 @@ $cell-sizes : (
 // 17-24
 // 19-24
 // 23-24
-@mixin single-batch($breakpoint:'') {
+@mixin small-batch($breakpoint:'') {
 	@each $key, $cell-size in $cell-sizes {
 		@for $i from 1 to (length($cell-size)+1) {
 			.batch-c#{$breakpoint}-#{$key}-#{nth($cell-size, $i)} {
@@ -55,16 +55,16 @@ $cell-sizes : (
 }
 
 // Base cells
-@include single-batch();
+@include small-batch();
 
 // Medium screen cells
 @include media($medium-screen) {
-	@include single-batch('-md');
+	@include small-batch('-md');
 }
 
 // Large screen cells
 @include media($large-screen) {
-	@include single-batch('-lg');
+	@include small-batch('-lg');
 }
 
 // Batch grid wrapper

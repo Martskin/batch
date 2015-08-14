@@ -179,7 +179,7 @@
                   <h3>Extendable Cell Sizes</h3>
                 </li>
                 <li class="feature-object_description">
-                  <a class="link--light link--underlined" href="#cell-sizes" data-behavior="smooth-scroll">Add more sizes</a> to the <code>$cell-sizes</code> map to have the <code>single-batch()</code> mixin distill your custom cell classes. Requires <a class="link--light link--underlined" href="http://sass-lang.com/" target="_blank">Sass</a>, <a class="link--light link--underlined" href="http://bourbon.io/" target="_blank">Bourbon</a> and <a class="link--light link--underlined" href="http://neat.bourbon.io/" target="_blank">Neat</a>.
+                  <a class="link--light link--underlined" href="#cell-sizes" data-behavior="smooth-scroll">Add more sizes</a> to the <code>$cell-sizes</code> map to have the <code>small-batch()</code> mixin distill your custom cell classes. Requires <a class="link--light link--underlined" href="http://sass-lang.com/" target="_blank">Sass</a>, <a class="link--light link--underlined" href="http://bourbon.io/" target="_blank">Bourbon</a> and <a class="link--light link--underlined" href="http://neat.bourbon.io/" target="_blank">Neat</a>.
                 </li>
               </ul>
             </div>
@@ -622,7 +622,7 @@
             </div>
 
             <h4 id="cell-sizes">Custom Cell Sizes</h4>
-            <p>Create your own cell sizes by adding to the <code><span class="code-o">$cell-sizes</span></code> Sass map in the <a href="#link">SCSS source file</a>. The key is the numerator and then the <code><span class="code-n">single-batch()</span></code> mixin loops through the value array for each denominator. The key-value pair is used in the class name and is also used to calculate the width percentage.</p>
+            <p>Create your own cell sizes by adding to the <code><span class="code-o">$cell-sizes</span></code> Sass map in the <a href="#link">SCSS source file</a>. The key is the numerator and then the <code><span class="code-n">small-batch()</span></code> mixin loops through the value array for each denominator. The key-value pair is used in the class name and is also used to calculate the width percentage.</p>
 <pre class="pre-block">
   <code>
     <span class="comment">
@@ -1033,7 +1033,7 @@
                   <header class="batch-c-1-1">
                     Header
                   </header>
-                  <main class="batch-c-1-1 batch-c-md-1-2 batch-c-lg-3-4">
+                  <main class="batch-c-1-1 batch-c-md-3-4 batch-c-lg-2-3">
                     Main
                   </main>
                   <footer class="batch-c-1-1">
