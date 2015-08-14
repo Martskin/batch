@@ -1,5 +1,9 @@
-// Batch 1.0.0
+// Batch 1.0
 // GPL-2.0 License
+
+// Breakpoints unless already defined when using Bitters.
+$medium-screen: em(640) !default;
+$large-screen: em(860) !default;
 
 // Cell Gutter
 // Must be an even number
@@ -8,9 +12,12 @@ $batch-gutter:	10px;
 // Cell Padding
 $batch-padding:	5px;
 
+// Cell Padding
+$batch-border:	#666666;
 
-// Batch units
-$unit-sizes : (
+
+// Batch cells
+$cell-sizes : (
 	1	:	(1, 2, 3, 4, 6, 8, 12, 24),
 	2	:	(3),
 	3	:	(4, 8),
@@ -23,10 +30,10 @@ $unit-sizes : (
 	23	:	(24)
 );
 
-// We'll loop through the $unit-sizes map to distill the cell classes.
+// We'll loop through the $cell-sizes map to distill the cell classes.
 // The key is the numerator and then we loop through the value array for each denominator.
 // The key-value pair is used in the class the name and is also used to calculate the width percentage.
-// Default sizes - 3rds, 4ths, 6ths, 8ths, 12ths and 24ths:
+// Default sizes are 3rds, 4ths, 6ths, 8ths, 12ths and 24ths:
 // 1-1, 1-2, 1-3, 1-4, 1-6, 1-8, 1-12, 1-24
 // 2-3
 // 3-4, 3-8
@@ -38,29 +45,29 @@ $unit-sizes : (
 // 19-24
 // 23-24
 @mixin single-batch($breakpoint:'') {
-	@each $key, $unit-size in $unit-sizes {
-		@for $i from 1 to (length($unit-size)+1) {
-			.batch-u#{$breakpoint}-#{$key}-#{nth($unit-size, $i)} {
-				@include flex(0 0 percentage($key/nth($unit-size, $i)) );
+	@each $key, $cell-size in $cell-sizes {
+		@for $i from 1 to (length($cell-size)+1) {
+			.batch-c#{$breakpoint}-#{$key}-#{nth($cell-size, $i)} {
+				@include flex(0 0 percentage($key/nth($cell-size, $i)) );
 			}
 		}
 	}
 }
 
-// Base units
+// Base cells
 @include single-batch();
 
-// Medium screen units
+// Medium screen cells
 @include media($medium-screen) {
 	@include single-batch('-md');
 }
 
-// Large screen units
+// Large screen cells
 @include media($large-screen) {
 	@include single-batch('-lg');
 }
 
-// Batch grid
+// Batch grid wrapper
 .batch-g {
 	@include align-items(stretch);
 	@include display(flex);
@@ -68,19 +75,36 @@ $unit-sizes : (
 	@include justify-content(flex-start);
 }
 
+.batch-g--border {
+	> [class^="batch-c"] {
+		position: relative;
+		&:before {
+			border:1px solid $batch-border;
+			content:'';
+			display: block;
+			@include position(absolute, 0);
+			pointer-events: none;
+		}
+	}
+}
+
 .batch-g--gutter {
 	margin:0 (-$batch-gutter/2);
-	> [class^="batch-u"] {
-		border-width:0 $batch-gutter/2 $batch-gutter;
+	> [class^="batch-c"] {
+		border-width:$batch-gutter/2;
 		border-style:solid;
 		border-color:transparent;
 	}
 }
 
-.batch-g--padded {
-	> [class^="batch-u"] {
+.batch-g--padding {
+	> [class^="batch-c"] {
 		padding:$batch-padding;
 	}
+}
+
+.batch-g--reverse {
+	@include flex-direction(row-reverse);
 }
 
 .batch-g--valign-top {

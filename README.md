@@ -7,14 +7,24 @@ A simple, responsive, flexbox grid system.
 
 *This is currently a work in progress*
 
-*Version 1.0.0*
+*Version 1.0*
 
 ###Basic Usage
 ```html
-<div class="batch-g batch-g--gutter batch-g--padded ">
-	<div class="batch-u-1-1 batch-u-md-1-2 batch-u-lg-1-4"></div>
+<div class="batch-g batch-g--border batch-g--gutter batch-g--padding ">
+	<div class="batch-c-1-1 batch-c-md-1-2 batch-c-lg-1-3">
+		Grid Cell 1
+	</div>
+	<div class="batch-c-1-1 batch-c-md-1-2 batch-c-lg-1-3">
+		Grid Cell 2
+	</div>
+	<div class="batch-c-1-1 batch-c-md-1-2 batch-c-lg-1-3">
+		Grid Cell 3
+	</div>
 </div>
 ```
+
+![basic-usage](https://cloud.githubusercontent.com/assets/3717760/9275606/3f007484-426c-11e5-9b05-94671aaaf562.png)
 
 ##Documentation (Coming Soon)
 [Batch Documentation](https://martskin.github.io/batch)

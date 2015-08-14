@@ -110,24 +110,23 @@ code {
 
 .batch-g--docs {
 	background:$barrel-gold-light;
-	margin:0 (-$batch-gutter);
-	padding: $batch-gutter $batch-gutter/2 0 $batch-gutter/2;
-	[class^="batch-u"] {
+	margin:0 (-$batch-gutter/2);
+	[class^="batch-c"] {
 		background:#ffffff;
 		border-color:$barrel-gold-light;
 	}
 }
 
-.batch-g--border {
+.batch-g--border-lg {
 	background:$barrel-gold;
-	[class^="batch-u"] {
+	[class^="batch-c"] {
 		border-color:$barrel-gold;
 	}
 }
 
 .batch-g--filled {
 	background:$lighter-gray;
-	[class^="batch-u"] {
+	[class^="batch-c"] {
 		background:$light-gray;
 		font-size:$small-font-size;
 	}
@@ -136,24 +135,54 @@ code {
 .batch-g--dl {
 	margin:0 0 $medium-spacing;
 	font-size:$small-font-size;
-	> [class^="batch-u"] {
+	> [class^="batch-c"] {
 		&:nth-child(odd) {
 			text-align: right;
 		}
 	}
 }
 
+@mixin template-shared($bkg, $hgt) {
+	color:$white;
+	text-align:center;
+	background:$bkg;
+	@include media($medium-screen) {
+		height:$hgt;
+	}
+}
+
+.batch-g--templates {
+	header {
+		@include template-shared($barrel-gold, 65px);
+	}
+	aside {
+		@include template-shared($barrel-amber, 200px);
+		&:nth-of-type(2) {
+			opacity: 0.7;
+		}
+	}
+	main {
+		@include template-shared($barrel-green, 200px);
+	}
+	footer {
+		@include template-shared($dark-gray, 65px);
+	}
+}
+
 // Utility Classes
 .highlight {
 	color: $dark-gray;
-	font-size: 0.75em;
-	line-height: 1.25em;
 	margin-bottom: 10px;
 	text-align: left;
 }
 
 .strong {
 	font-weight: bold;
+}
+
+.small-text {
+	font-size: 0.75em;
+	line-height: 1.25em;
 }
 
 .highlight-sm {
