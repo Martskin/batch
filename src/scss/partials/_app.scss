@@ -21,14 +21,38 @@
 	padding-bottom:$base-spacing;
 }
 
+.hero {
+	padding-top:$medium-spacing;
+	padding-bottom:$medium-spacing;
+	@include media($medium-screen) {
+		padding-top:$large-spacing;
+		padding-bottom:$large-spacing;
+	}
+}
+
 .hero-headline {
 	text-align:center;
 	font-size:2.5em;
-	margin:0;
-	padding:$small-spacing;
-	text-shadow:0px 2px 0px rgba($dark-gray, 0.1);
-	@include media($medium-screen) {
-		padding:$large-spacing $small-spacing;
+	text-shadow:0px 2px 0px rgba($dark-gray, 0.2);
+}
+
+.hero-warehouse {
+    margin: 0 auto;
+    line-height: 0;
+    @include media($medium-screen) {
+    	width: 90%;
+    }
+    @include media($large-screen) {
+    	width: 70%;
+    }
+}
+
+.bi-barrel {
+	transition: top 0.2s linear;
+	position: relative;
+	top: -1000px;
+	&.is-dropped {
+		top: 0px;
 	}
 }
 
@@ -93,6 +117,13 @@ code {
 	}
 }
 
+.batch-g--border {
+	background:$barrel-gold;
+	[class^="batch-u"] {
+		border-color:$barrel-gold;
+	}
+}
+
 .batch-g--filled {
 	background:$lighter-gray;
 	[class^="batch-u"] {
@@ -103,6 +134,7 @@ code {
 
 .batch-g--dl {
 	margin:0 0 $medium-spacing;
+	font-size:$small-font-size;
 	> [class^="batch-u"] {
 		&:nth-child(odd) {
 			text-align: right;
@@ -123,44 +155,44 @@ code {
 	font-weight: bold;
 }
 
-.highlight-mobile {
+.highlight-sm {
 	.strong {
 		font-weight: bold;
 	}
 	@include media($medium-screen) {
-		color:rgba($dark-gray, 0.6);
+		opacity: 0.4;
 		.strong {
 			font-weight: normal;
 		}
 	}
 }
 
-.highlight-tablet {
-	color:rgba($dark-gray, 0.6);
+.highlight-md {
+	opacity: 0.4;
 	.strong {
 		font-weight: normal;
 	}
 	@include media($medium-screen) {
-		color:$dark-gray;
+		opacity: 1;
 		.strong {
 			font-weight: bold;
 		}
 	}
 	@include media($large-screen) {
-		color:rgba($dark-gray, 0.6);
+		opacity: 0.4;
 		.strong {
 			font-weight: normal;
 		}
 	}
 }
 
-.highlight-desktop {
-	color:rgba($dark-gray, 0.6);
+.highlight-lg {
+	opacity: 0.4;
 	.strong {
 		font-weight: normal;
 	}
 	@include media($large-screen) {
-		color:$dark-gray;
+		opacity: 1;
 		.strong {
 			font-weight: bold;
 		}

@@ -4,12 +4,13 @@
 
 #Batch
 
-A simple, responsive flexbox grid system.
+A simple, responsive, flexbox grid system.
+
 *This is currently a work in progress*
 
 *Version 1.0.0*
 
-###Usage
+###Basic Usage
 ``<div class="batch-u-1-1 batch-u-md-1-2 batch-u-lg-1-4"></div>``
 
 
@@ -20,3 +21,5 @@ A simple, responsive flexbox grid system.
 
 ## Credits
 * Framework built with [FastShell](https://github.com/HosseinKarami/fastshell)
+
+* Inspired by [PureGrid](http://purecss.io/grids/), [Bootstrap](http://getbootstrap.com/) and [csswizardry-grids](http://csswizardry.com/csswizardry-grids/). 

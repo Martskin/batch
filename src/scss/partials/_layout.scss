@@ -2,6 +2,7 @@
 
 .l-row {
 	padding:$base-spacing $small-spacing;
+	overflow:hidden;
 	@include media($medium-screen) {
 		padding:$large-spacing $small-spacing;
 	}

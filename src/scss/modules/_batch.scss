@@ -11,23 +11,33 @@ $batch-padding:	5px;
 
 // Batch units
 $unit-sizes : (
-	1 : (1, 2, 3, 4, 8),
-	2 : (3),
-	3 : (4, 8),
-	5 : (8),
-	7 : (8)
+	1	:	(1, 2, 3, 4, 6, 8, 12, 24),
+	2	:	(3),
+	3	:	(4, 8),
+	5	:	(6, 8, 12, 24),
+	7	:	(8, 12, 24),
+	11	:	(12, 24),
+	13	:	(24),
+	17	:	(24),
+	19	:	(24),
+	23	:	(24)
 );
 
-// We'll loop through $unit-sizes map to distill the cell classes.
+// We'll loop through the $unit-sizes map to distill the cell classes.
 // The key is the numerator and then we
 // loop through the value array for each denominator.
-// The key/value determines the name and is used to calculate the width percentage.
-// Default size. 3rds, 4ths and 8ths:
-// 1-1, 1-2, 1-3, 1-4, 1-8
+// The key-value pair determines the name and is also used to calculate the width %.
+// Default sizes - 3rds, 4ths, 6ths, 8ths, 12ths and 24ths:
+// 1-1, 1-2, 1-3, 1-4, 1-6, 1-8, 1-12, 1-24
 // 2-3
 // 3-4, 3-8
-// 5-8
-// 7-8
+// 5-6, 5-8, 5-12, 5-24
+// 7-8, 7-12, 7-24
+// 11-12, 11-24
+// 13-24
+// 17-24
+// 19-24
+// 23-24
 @mixin single-batch($breakpoint:'') {
 	@each $key, $unit-size in $unit-sizes {
 		@for $i from 1 to (length($unit-size)+1) {
