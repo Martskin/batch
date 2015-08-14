@@ -426,22 +426,36 @@ body {
   line-height: 1.5; }
 
 h1 {
+  font-size: 2.25em;
   font-family: 'Raleway', sans-serif;
-  font-size: 2em;
   font-weight: 500;
   line-height: 1.2;
   margin: 0 0 0.75em; }
 
 h2 {
+  font-size: 2em;
   font-family: 'Raleway', sans-serif;
-  font-size: 1.75em;
   font-weight: 500;
   line-height: 1.2;
   margin: 0 0 0.75em; }
 
-h3, h4, h5, h6 {
+h3 {
+  font-size: 1.75em;
   font-family: 'Raleway', sans-serif;
-  font-size: 1.5em;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 0 0 0.75em; }
+
+h4 {
+  font-size: 1.25em;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 0 0 0.75em; }
+
+h5, h6 {
+  font-size: 1.15em;
+  font-family: 'Raleway', sans-serif;
   font-weight: 500;
   line-height: 1.2;
   margin: 0 0 0.75em; }
@@ -969,7 +983,7 @@ html {
 .batch-g--padded > [class^="batch-u"] {
   padding: 5px; }
 
-.batch-g--align-top {
+.batch-g--valign-top {
   box-align: start;
   -webkit-align-items: flex-start;
   -moz-align-items: flex-start;
@@ -978,7 +992,7 @@ html {
   align-items: flex-start;
   -ms-flex-align: start; }
 
-.batch-g--align-center {
+.batch-g--valign-center {
   box-align: center;
   -webkit-align-items: center;
   -moz-align-items: center;
@@ -987,7 +1001,7 @@ html {
   align-items: center;
   -ms-flex-align: center; }
 
-.batch-g--align-bottom {
+.batch-g--valign-bottom {
   box-align: end;
   -webkit-align-items: flex-end;
   -moz-align-items: flex-end;
@@ -1126,7 +1140,7 @@ html {
     display: table; }
 
 .l-section {
-  margin-bottom: 2.25em; }
+  margin-bottom: 3em; }
   .l-section:last-of-type {
     margin-bottom: 0; }
 
@@ -1175,6 +1189,11 @@ html {
   top: -1000px; }
   .bi-barrel.is-dropped {
     top: 0px; }
+
+.rotate-flip {
+  -webkit-transform: rotate(90deg) scaleX(-1);
+      -ms-transform: rotate(90deg) scaleX(-1);
+          transform: rotate(90deg) scaleX(-1); }
 
 .feature-object {
   text-align: center;

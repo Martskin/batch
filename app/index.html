@@ -147,7 +147,7 @@
             <div class="batch-u-1-1 batch-u-md-1-3">
               <ul class="feature-object">
                 <li class="feature-object_icon">
-                  <i class="fa fa-tasks"></i>
+                  <i class="fa fa-signal rotate-flip"></i>
                 </li>
                 <li class="feature-object_title">
                   <h3>Percentage Based Grid</h3>
@@ -166,7 +166,7 @@
                   <h3>Easy To Use</h3>
                 </li>
                 <li class="feature-object_description">
-                  <p>Download the vanilla <a class="link--light link--underlined" href="#link" target="_blank">CSS</a> or the <a class="link--light link--underlined" href="#link" target="_blank">SCSS</a> source file. Read the <a class="link--light link--underlined" href="#link" target="_blank">installation instructions</a> to add Batch to your project.</p>
+                  <p>Download the vanilla <a class="link--light link--underlined" href="#link" target="_blank">CSS</a> or the <a class="link--light link--underlined" href="#link" target="_blank">SCSS</a> source file. Read the <a class="link--light link--underlined" href="#installation-instructions" data-behavior="smooth-scroll">installation instructions</a> to add Batch to your project.</p>
                 </li>
               </ul>
             </div>
@@ -179,7 +179,7 @@
                   <h3>Extendable Units</h3>
                 </li>
                 <li class="feature-object_description">
-                  <a class="link--light link--underlined" href="#unit-sizes"  data-behavior="smooth-scroll">Add more sizes</a> to the <code>$unit-sizes</code> map to have the <code>single-batch()</code> mixin distill your custom unit classes. Requires <a class="link--light link--underlined" href="http://sass-lang.com/" target="_blank">Sass</a>, <a class="link--light link--underlined" href="http://bourbon.io/" target="_blank">Bourbon</a> and <a class="link--light link--underlined" href="http://neat.bourbon.io/" target="_blank">Neat</a>.
+                  <a class="link--light link--underlined" href="#unit-sizes" data-behavior="smooth-scroll">Add more sizes</a> to the <code>$unit-sizes</code> map to have the <code>single-batch()</code> mixin distill your custom unit classes. Requires <a class="link--light link--underlined" href="http://sass-lang.com/" target="_blank">Sass</a>, <a class="link--light link--underlined" href="http://bourbon.io/" target="_blank">Bourbon</a> and <a class="link--light link--underlined" href="http://neat.bourbon.io/" target="_blank">Neat</a>.
                 </li>
               </ul>
             </div>
@@ -225,154 +225,159 @@
 
       <div class="l-row">
         <div class="l-container">
-          <h3><i class="fa fa-puzzle-piece"></i> Basic Usage</h3>
-          <p>This example demonstrates how to set the width of a cell at <span class="strong">all</span> screen sizes.</p>
-          <div class="batch-g batch-g--gutter batch-g--padded batch-g--docs">
-            <div class="batch-u-1-3">
-                <pre>
-                  <code>&lt;<span class="code-o">div</span> <span class="code-c">class</span>=<span class="code-n">"batch-u-1-3"</span>&gt;</code>
-                </pre>
-                <p class="highlight">This cell is <span class="strong">33%</span> width on all screen sizes.</p>
+
+          <section class="l-section">
+            <h3><i class="fa fa-puzzle-piece"></i> Basic Usage</h3>
+            <p>This example demonstrates how to set the width of a cell at <span class="strong">all</span> screen sizes.</p>
+            <div class="batch-g batch-g--gutter batch-g--padded batch-g--docs">
+              <div class="batch-u-1-3">
+                  <pre>
+                    <code>&lt;<span class="code-o">div</span> <span class="code-c">class</span>=<span class="code-n">"batch-u-1-3"</span>&gt;</code>
+                  </pre>
+                  <p class="highlight">This cell is <span class="strong">33%</span> width on all screen sizes.</p>
+              </div>
+              <div class="batch-u-2-3">
+                  <pre>
+                    <code>&lt;<span class="code-o">div</span> <span class="code-c">class</span>=<span class="code-n">"batch-u-2-3"</span>&gt;</code>
+                  </pre>
+                  <p class="highlight">This cell is <span class="strong">66%</span> width on all screen sizes.</p>
+              </div>
+              <div class="batch-u-1-4">
+                  <pre>
+                    <code>&lt;<span class="code-o">div</span> <span class="code-c">class</span>=<span class="code-n">"batch-u-1-4"</span>&gt;</code>
+                  </pre>
+                  <p class="highlight">This cell is <span class="strong">25%</span> width on all screen sizes.</p>
+              </div>
+              <div class="batch-u-1-2">
+                  <pre>
+                    <code>&lt;<span class="code-o">div</span> <span class="code-c">class</span>=<span class="code-n">"batch-u-1-2"</span>&gt;</code>
+                  </pre>
+                  <p class="highlight">This cell is <span class="strong">50%</span> width on all screen sizes.</p>
+              </div>
+              <div class="batch-u-1-4">
+                  <pre>
+                    <code>&lt;<span class="code-o">div</span> <span class="code-c">class</span>=<span class="code-n">"batch-u-1-4"</span>&gt;</code>
+                  </pre>
+                  <p class="highlight">This cell is <span class="strong">25%</span> width on all screen sizes.</p>
+              </div>
+              <div class="batch-u-3-8">
+                  <pre>
+                    <code>&lt;<span class="code-o">div</span> <span class="code-c">class</span>=<span class="code-n">"batch-u-3-8"</span>&gt;</code>
+                  </pre>
+                  <p class="highlight">This cell is <span class="strong">37.5%</span> width on all screen sizes.</p>
+              </div>
+              <div class="batch-u-5-8">
+                  <pre>
+                    <code>&lt;<span class="code-o">div</span> <span class="code-c">class</span>=<span class="code-n">"batch-u-5-8"</span>&gt;</code>
+                  </pre>
+                  <p class="highlight">This cell is <span class="strong">62.5%</span> width on all screen sizes.</p>
+              </div>
+              <div class="batch-u-1-8">
+                  <pre>
+                    <code>&lt;<span class="code-o">div</span> <span class="code-c">class</span>=<span class="code-n">"</span></code>
+                    <code><span class="code-n">batch-u-1-8</span></code>
+                    <code><span class="code-n">"</span>&gt;</code>
+                  </pre>
+                  <p class="highlight">This cell is <span class="strong">12.5%</span> width on all screen sizes.</p>
+              </div>
+              <div class="batch-u-7-8">
+                  <pre>
+                    <code>&lt;<span class="code-o">div</span> <span class="code-c">class</span>=<span class="code-n">"batch-u-7-8"</span>&gt;</code>
+                  </pre>
+                  <p class="highlight">This cell is <span class="strong">87.5%</span> width on all screen sizes.</p>
+              </div>
+              <div class="batch-u-1-1">
+                  <pre>
+                    <code>&lt;<span class="code-o">div</span> <span class="code-c">class</span>=<span class="code-n">"batch-u-1-1"</span>&gt;</code>
+                  </pre>
+                  <p class="highlight">This cell is <span class="strong">100%</span> width on all screen sizes.</p>
+              </div>
             </div>
-            <div class="batch-u-2-3">
-                <pre>
-                  <code>&lt;<span class="code-o">div</span> <span class="code-c">class</span>=<span class="code-n">"batch-u-2-3"</span>&gt;</code>
-                </pre>
-                <p class="highlight">This cell is <span class="strong">66%</span> width on all screen sizes.</p>
-            </div>
-            <div class="batch-u-1-4">
-                <pre>
-                  <code>&lt;<span class="code-o">div</span> <span class="code-c">class</span>=<span class="code-n">"batch-u-1-4"</span>&gt;</code>
-                </pre>
-                <p class="highlight">This cell is <span class="strong">25%</span> width on all screen sizes.</p>
-            </div>
-            <div class="batch-u-1-2">
-                <pre>
-                  <code>&lt;<span class="code-o">div</span> <span class="code-c">class</span>=<span class="code-n">"batch-u-1-2"</span>&gt;</code>
-                </pre>
-                <p class="highlight">This cell is <span class="strong">50%</span> width on all screen sizes.</p>
-            </div>
-            <div class="batch-u-1-4">
-                <pre>
-                  <code>&lt;<span class="code-o">div</span> <span class="code-c">class</span>=<span class="code-n">"batch-u-1-4"</span>&gt;</code>
-                </pre>
-                <p class="highlight">This cell is <span class="strong">25%</span> width on all screen sizes.</p>
-            </div>
-            <div class="batch-u-3-8">
-                <pre>
-                  <code>&lt;<span class="code-o">div</span> <span class="code-c">class</span>=<span class="code-n">"batch-u-3-8"</span>&gt;</code>
-                </pre>
-                <p class="highlight">This cell is <span class="strong">37.5%</span> width on all screen sizes.</p>
-            </div>
-            <div class="batch-u-5-8">
-                <pre>
-                  <code>&lt;<span class="code-o">div</span> <span class="code-c">class</span>=<span class="code-n">"batch-u-5-8"</span>&gt;</code>
-                </pre>
-                <p class="highlight">This cell is <span class="strong">62.5%</span> width on all screen sizes.</p>
-            </div>
-            <div class="batch-u-1-8">
+          </section>
+        
+           <section class="l-section">
+            <h3><i class="fa fa-arrows-h"></i> Responsive Usage</h3>
+            <p>This example demonstrates how to set the width of a cell at <span class="strong">mobile</span> ( <code><span class="code-n">batch-u-</span></code> ), <span class="strong">tablet</span> ( <code><span class="code-n">batch-u-md-</span></code> ) and <span class="strong">desktop</span> ( <code><span class="code-n">batch-u-lg-</span></code> ) screen sizes.</p>
+            <div class="batch-g batch-g--gutter batch-g--padded batch-g--docs">
+              <div class="batch-u-1-1 batch-u-md-1-2 batch-u-lg-1-4">
                 <pre>
                   <code>&lt;<span class="code-o">div</span> <span class="code-c">class</span>=<span class="code-n">"</span></code>
-                  <code><span class="code-n">batch-u-1-8</span></code>
+                  <code><span class="code-n highlight highlight-sm">batch-u-1-1</span></code>
+                  <code><span class="code-n highlight highlight-md">batch-u-md-1-2</span></code>
+                  <code><span class="code-n highlight highlight-lg">batch-u-lg-1-4</span></code>
                   <code><span class="code-n">"</span>&gt;</code>
                 </pre>
-                <p class="highlight">This cell is <span class="strong">12.5%</span> width on all screen sizes.</p>
-            </div>
-            <div class="batch-u-7-8">
-                <pre>
-                  <code>&lt;<span class="code-o">div</span> <span class="code-c">class</span>=<span class="code-n">"batch-u-7-8"</span>&gt;</code>
+                <p class="highlight highlight-sm">This cell <span class="show-sm">is</span><span class="hide-sm">will be</span> <span class="strong">100%</span> width on <span class="strong">mobile</span> size screens.</p>
+                <p class="highlight highlight-md">This cell <span class="show-md">is</span><span class="hide-md">will be</span> <span class="strong">50%</span> width on <span class="strong">tablet</span> size screens.</p>
+                <p class="highlight highlight-lg">This cell <span class="show-lg">is</span><span class="hide-lg">will be</span> <span class="strong">25%</span> width on <span class="strong">desktop</span> size screens.</p>
+              </div>
+              <div class="batch-u-1-1 batch-u-md-1-2 batch-u-lg-1-4">
+                 <pre>
+                  <code>&lt;<span class="code-o">div</span> <span class="code-c">class</span>=<span class="code-n">"</span></code>
+                  <code><span class="code-n highlight highlight-sm">batch-u-1-1</span></code>
+                  <code><span class="code-n highlight highlight-md">batch-u-md-1-2</span></code>
+                  <code><span class="code-n highlight highlight-lg">batch-u-lg-1-4</span></code>
+                  <code><span class="code-n">"</span>&gt;</code>
                 </pre>
-                <p class="highlight">This cell is <span class="strong">87.5%</span> width on all screen sizes.</p>
-            </div>
-            <div class="batch-u-1-1">
-                <pre>
-                  <code>&lt;<span class="code-o">div</span> <span class="code-c">class</span>=<span class="code-n">"batch-u-1-1"</span>&gt;</code>
+                <p class="highlight highlight-sm">This cell <span class="show-sm">is</span><span class="hide-sm">will be</span> <span class="strong">100%</span> width on <span class="strong">mobile</span> size screens.</p>
+                <p class="highlight highlight-md">This cell <span class="show-md">is</span><span class="hide-md">will be</span> <span class="strong">50%</span> width on <span class="strong">tablet</span> size screens.</p>
+                <p class="highlight highlight-lg">This cell <span class="show-lg">is</span><span class="hide-lg">will be</span> <span class="strong">25%</span> width on <span class="strong">desktop</span> size screens.</p>
+              </div>
+              <div class="batch-u-1-1 batch-u-md-1-2 batch-u-lg-1-4">
+                 <pre>
+                  <code>&lt;<span class="code-o">div</span> <span class="code-c">class</span>=<span class="code-n">"</span></code>
+                  <code><span class="code-n highlight highlight-sm">batch-u-1-1</span></code>
+                  <code><span class="code-n highlight highlight-md">batch-u-md-1-2</span></code>
+                  <code><span class="code-n highlight highlight-lg">batch-u-lg-1-4</span></code>
+                  <code><span class="code-n">"</span>&gt;</code>
                 </pre>
-                <p class="highlight">This cell is <span class="strong">100%</span> width on all screen sizes.</p>
+                <p class="highlight highlight-sm">This cell <span class="show-sm">is</span><span class="hide-sm">will be</span> <span class="strong">100%</span> width on <span class="strong">mobile</span> size screens.</p>
+                <p class="highlight highlight-md">This cell <span class="show-md">is</span><span class="hide-md">will be</span> <span class="strong">50%</span> width on <span class="strong">tablet</span> size screens.</p>
+                <p class="highlight highlight-lg">This cell <span class="show-lg">is</span><span class="hide-lg">will be</span> <span class="strong">25%</span> width on <span class="strong">desktop</span> size screens.</p>
+              </div>
+              <div class="batch-u-1-1 batch-u-md-1-2 batch-u-lg-1-4">
+                <pre>
+                  <code>&lt;<span class="code-o">div</span> <span class="code-c">class</span>=<span class="code-n">"</span></code>
+                  <code><span class="code-n highlight highlight-sm">batch-u-1-1</span></code>
+                  <code><span class="code-n highlight highlight-md">batch-u-md-1-2</span></code>
+                  <code><span class="code-n highlight highlight-lg">batch-u-lg-1-4</span></code>
+                  <code><span class="code-n">"</span>&gt;</code>
+                </pre>
+                <p class="highlight highlight-sm">This cell <span class="show-sm">is</span><span class="hide-sm">will be</span> <span class="strong">100%</span> width on <span class="strong">mobile</span> size screens.</p>
+                <p class="highlight highlight-md">This cell <span class="show-md">is</span><span class="hide-md">will be</span> <span class="strong">50%</span> width on <span class="strong">tablet</span> size screens.</p>
+                <p class="highlight highlight-lg">This cell <span class="show-lg">is</span><span class="hide-lg">will be</span> <span class="strong">25%</span> width on <span class="strong">desktop</span> size screens.</p>
+              </div>
+              <div class="batch-u-1-1 batch-u-md-1-2 batch-u-lg-1-4">
+                <pre>
+                  <code>&lt;<span class="code-o">div</span> <span class="code-c">class</span>=<span class="code-n">"</span></code>
+                  <code><span class="code-n highlight highlight-sm">batch-u-1-1</span></code>
+                  <code><span class="code-n highlight highlight-md">batch-u-md-1-2</span></code>
+                  <code><span class="code-n highlight highlight-lg">batch-u-lg-1-4</span></code>
+                  <code><span class="code-n">"</span>&gt;</code>
+                </pre>
+                <p class="highlight highlight-sm">This cell <span class="show-sm">is</span><span class="hide-sm">will be</span> <span class="strong">100%</span> width on <span class="strong">mobile</span> size screens.</p>
+                <p class="highlight highlight-md">This cell <span class="show-md">is</span><span class="hide-md">will be</span> <span class="strong">50%</span> width on <span class="strong">tablet</span> size screens.</p>
+                <p class="highlight highlight-lg">This cell <span class="show-lg">is</span><span class="hide-lg">will be</span> <span class="strong">25%</span> width on <span class="strong">desktop</span> size screens.</p>
+              </div>
+              <div class="batch-u-1-1 batch-u-md-1-2 batch-u-lg-1-4">
+                <pre>
+                  <code>&lt;<span class="code-o">div</span> <span class="code-c">class</span>=<span class="code-n">"</span></code>
+                  <code><span class="code-n highlight highlight-sm">batch-u-1-1</span></code>
+                  <code><span class="code-n highlight highlight-md">batch-u-md-1-2</span></code>
+                  <code><span class="code-n highlight highlight-lg">batch-u-lg-1-4</span></code>
+                  <code><span class="code-n">"</span>&gt;</code>
+                </pre>
+                <p class="highlight highlight-sm">This cell <span class="show-sm">is</span><span class="hide-sm">will be</span> <span class="strong">100%</span> width on <span class="strong">mobile</span> size screens.</p>
+                <p class="highlight highlight-md">This cell <span class="show-md">is</span><span class="hide-md">will be</span> <span class="strong">50%</span> width on <span class="strong">tablet</span> size screens.</p>
+                <p class="highlight highlight-lg">This cell <span class="show-lg">is</span><span class="hide-lg">will be</span> <span class="strong">25%</span> width on <span class="strong">desktop</span> size screens.</p>
+              </div>
             </div>
-          </div>
-        
-          <h3><i class="fa fa-arrows-h"></i> Responsive Usage</h3>
-          <p>This example demonstrates how to set the width of a cell at <span class="strong">mobile</span> ( <code><span class="code-n">batch-u-</span></code> ), <span class="strong">tablet</span> ( <code><span class="code-n">batch-u-md-</span></code> ) and <span class="strong">desktop</span> ( <code><span class="code-n">batch-u-lg-</span></code> ) screen sizes.</p>
-          <div class="batch-g batch-g--gutter batch-g--padded batch-g--docs">
-            <div class="batch-u-1-1 batch-u-md-1-2 batch-u-lg-1-4">
-              <pre>
-                <code>&lt;<span class="code-o">div</span> <span class="code-c">class</span>=<span class="code-n">"</span></code>
-                <code><span class="code-n highlight highlight-sm">batch-u-1-1</span></code>
-                <code><span class="code-n highlight highlight-md">batch-u-md-1-2</span></code>
-                <code><span class="code-n highlight highlight-lg">batch-u-lg-1-4</span></code>
-                <code><span class="code-n">"</span>&gt;</code>
-              </pre>
-              <p class="highlight highlight-sm">This cell <span class="show-sm">is</span><span class="hide-sm">will be</span> <span class="strong">100%</span> width on <span class="strong">mobile</span> size screens.</p>
-              <p class="highlight highlight-md">This cell <span class="show-md">is</span><span class="hide-md">will be</span> <span class="strong">50%</span> width on <span class="strong">tablet</span> size screens.</p>
-              <p class="highlight highlight-lg">This cell <span class="show-lg">is</span><span class="hide-lg">will be</span> <span class="strong">25%</span> width on <span class="strong">desktop</span> size screens.</p>
-            </div>
-            <div class="batch-u-1-1 batch-u-md-1-2 batch-u-lg-1-4">
-               <pre>
-                <code>&lt;<span class="code-o">div</span> <span class="code-c">class</span>=<span class="code-n">"</span></code>
-                <code><span class="code-n highlight highlight-sm">batch-u-1-1</span></code>
-                <code><span class="code-n highlight highlight-md">batch-u-md-1-2</span></code>
-                <code><span class="code-n highlight highlight-lg">batch-u-lg-1-4</span></code>
-                <code><span class="code-n">"</span>&gt;</code>
-              </pre>
-              <p class="highlight highlight-sm">This cell <span class="show-sm">is</span><span class="hide-sm">will be</span> <span class="strong">100%</span> width on <span class="strong">mobile</span> size screens.</p>
-              <p class="highlight highlight-md">This cell <span class="show-md">is</span><span class="hide-md">will be</span> <span class="strong">50%</span> width on <span class="strong">tablet</span> size screens.</p>
-              <p class="highlight highlight-lg">This cell <span class="show-lg">is</span><span class="hide-lg">will be</span> <span class="strong">25%</span> width on <span class="strong">desktop</span> size screens.</p>
-            </div>
-            <div class="batch-u-1-1 batch-u-md-1-2 batch-u-lg-1-4">
-               <pre>
-                <code>&lt;<span class="code-o">div</span> <span class="code-c">class</span>=<span class="code-n">"</span></code>
-                <code><span class="code-n highlight highlight-sm">batch-u-1-1</span></code>
-                <code><span class="code-n highlight highlight-md">batch-u-md-1-2</span></code>
-                <code><span class="code-n highlight highlight-lg">batch-u-lg-1-4</span></code>
-                <code><span class="code-n">"</span>&gt;</code>
-              </pre>
-              <p class="highlight highlight-sm">This cell <span class="show-sm">is</span><span class="hide-sm">will be</span> <span class="strong">100%</span> width on <span class="strong">mobile</span> size screens.</p>
-              <p class="highlight highlight-md">This cell <span class="show-md">is</span><span class="hide-md">will be</span> <span class="strong">50%</span> width on <span class="strong">tablet</span> size screens.</p>
-              <p class="highlight highlight-lg">This cell <span class="show-lg">is</span><span class="hide-lg">will be</span> <span class="strong">25%</span> width on <span class="strong">desktop</span> size screens.</p>
-            </div>
-            <div class="batch-u-1-1 batch-u-md-1-2 batch-u-lg-1-4">
-              <pre>
-                <code>&lt;<span class="code-o">div</span> <span class="code-c">class</span>=<span class="code-n">"</span></code>
-                <code><span class="code-n highlight highlight-sm">batch-u-1-1</span></code>
-                <code><span class="code-n highlight highlight-md">batch-u-md-1-2</span></code>
-                <code><span class="code-n highlight highlight-lg">batch-u-lg-1-4</span></code>
-                <code><span class="code-n">"</span>&gt;</code>
-              </pre>
-              <p class="highlight highlight-sm">This cell <span class="show-sm">is</span><span class="hide-sm">will be</span> <span class="strong">100%</span> width on <span class="strong">mobile</span> size screens.</p>
-              <p class="highlight highlight-md">This cell <span class="show-md">is</span><span class="hide-md">will be</span> <span class="strong">50%</span> width on <span class="strong">tablet</span> size screens.</p>
-              <p class="highlight highlight-lg">This cell <span class="show-lg">is</span><span class="hide-lg">will be</span> <span class="strong">25%</span> width on <span class="strong">desktop</span> size screens.</p>
-            </div>
-            <div class="batch-u-1-1 batch-u-md-1-2 batch-u-lg-1-4">
-              <pre>
-                <code>&lt;<span class="code-o">div</span> <span class="code-c">class</span>=<span class="code-n">"</span></code>
-                <code><span class="code-n highlight highlight-sm">batch-u-1-1</span></code>
-                <code><span class="code-n highlight highlight-md">batch-u-md-1-2</span></code>
-                <code><span class="code-n highlight highlight-lg">batch-u-lg-1-4</span></code>
-                <code><span class="code-n">"</span>&gt;</code>
-              </pre>
-              <p class="highlight highlight-sm">This cell <span class="show-sm">is</span><span class="hide-sm">will be</span> <span class="strong">100%</span> width on <span class="strong">mobile</span> size screens.</p>
-              <p class="highlight highlight-md">This cell <span class="show-md">is</span><span class="hide-md">will be</span> <span class="strong">50%</span> width on <span class="strong">tablet</span> size screens.</p>
-              <p class="highlight highlight-lg">This cell <span class="show-lg">is</span><span class="hide-lg">will be</span> <span class="strong">25%</span> width on <span class="strong">desktop</span> size screens.</p>
-            </div>
-            <div class="batch-u-1-1 batch-u-md-1-2 batch-u-lg-1-4">
-              <pre>
-                <code>&lt;<span class="code-o">div</span> <span class="code-c">class</span>=<span class="code-n">"</span></code>
-                <code><span class="code-n highlight highlight-sm">batch-u-1-1</span></code>
-                <code><span class="code-n highlight highlight-md">batch-u-md-1-2</span></code>
-                <code><span class="code-n highlight highlight-lg">batch-u-lg-1-4</span></code>
-                <code><span class="code-n">"</span>&gt;</code>
-              </pre>
-              <p class="highlight highlight-sm">This cell <span class="show-sm">is</span><span class="hide-sm">will be</span> <span class="strong">100%</span> width on <span class="strong">mobile</span> size screens.</p>
-              <p class="highlight highlight-md">This cell <span class="show-md">is</span><span class="hide-md">will be</span> <span class="strong">50%</span> width on <span class="strong">tablet</span> size screens.</p>
-              <p class="highlight highlight-lg">This cell <span class="show-lg">is</span><span class="hide-lg">will be</span> <span class="strong">25%</span> width on <span class="strong">desktop</span> size screens.</p>
-            </div>
-          </div>
+          </section>
 
           <section class="l-section">
 
             <h3><i class="fa fa-th"></i> Grid Cell Unit Classes</h3>
-            <p>Default available cell sizes: 3rds, 4ths, 8ths, 12ths and 24ths. For simplicity equivalent fractions are simplified. Since <code><span class="code-n">batch-u-1-2</span></code> and <code><span class="code-n">batch-u-12-24</span></code> both equal <span class="strong">50%</span>, only <code><span class="code-n">batch-u-1-2</span></code> is available.</p>
+            <p>Default available cell sizes: 3rds, 4ths, 6ths, 8ths, 12ths and 24ths. Equivalent fractions are simplified. For example, <code><span class="code-n">batch-u-1-2</span></code> and <code><span class="code-n">batch-u-12-24</span></code> both equal <span class="strong">50%</span>, so only <code><span class="code-n">batch-u-1-2</span></code> is made available.</p>
             <div class="batch-g batch-g--gutter batch-g--dl">
               <div class="batch-u-1-6 batch-u-md-1-12 batch-u-lg-1-24">
                 <code><span class="code-n">1-1</span></code>
@@ -616,14 +621,11 @@
               </div>
             </div>
 
-            <p id="unit-sizes">Create custom unit sizes by adding to the <code><span class="code-o">$unit-sizes</span></code> Sass map in the <a href="#link">SCSS source file</a>.</p>
+            <h4 id="unit-sizes">Custom Unit Sizes</h4>
+            <p>Create your own unit sizes by adding to the <code><span class="code-o">$unit-sizes</span></code> Sass map in the <a href="#link">SCSS source file</a>. The key is the numerator and then the <code><span class="code-n">single-batch()</span></code> mixin loops through the value array for each denominator. The key-value pair is used in the class name and is also used to calculate the width percentage.</p>
 <pre class="pre-block">
   <code>
     <span class="comment">
-      // We'll loop through the $unit-sizes map to distill the cell classes.
-      // The key is the numerator and then we
-      // loop through the value array for each denominator.
-      // The key-value pair determines the name and is also used to calculate the width percentage.
       // Default sizes - 3rds, 4ths, 6ths, 8ths, 12ths and 24ths:
       // 1-1, 1-2, 1-3, 1-4, 1-6, 1-8, 1-12, 1-24
       // 2-3
@@ -655,6 +657,7 @@
           </section>
 
           <h3><i class="fa fa-sliders"></i> Modifier Classes</h3>
+          <h4>Grid Gutter</h4>
 
           <section class="l-section">
             <p>Add the <code><span class="code-n">batch-g--gutter</span></code> class to the <code><span class="code-n">batch-g</span></code> grid wrapper element to add a gutter between the cells. Adjust the gutter size by changing the <code><span class="code-o">$batch-gutter</span></code> Sass variable in the <a href="#link">SCSS source file</a>.</p>
@@ -689,7 +692,8 @@
           </section>
 
           <section class="l-section">
-            <p>Add the <code><span class="code-n">batch-g--padded</span></code> class to the <code><span class="code-n">batch-g</span></code> grid wrapper element to add padding inside the cells. Adjust the gutter size by changing the <code><span class="code-o">$batch-padding</span></code> Sass variable in the <a href="#link">SCSS source file</a>.</p>
+            <h4>Cell Padding</h4>
+            <p>Add the <code><span class="code-n">batch-g--padded</span></code> class to the <code><span class="code-n">batch-g</span></code> grid wrapper element to add padding inside the cells. Adjust the padding size by changing the <code><span class="code-o">$batch-padding</span></code> Sass variable in the <a href="#link">SCSS source file</a>.</p>
             <p class="comment">&lt;!-- Example Markup Code --&gt;</p>
 <pre class="pre-block">
   <code>
@@ -721,11 +725,12 @@
           </section>
 
           <section class="l-section">
-            <p>Add the <code><span class="code-n">batch-g--align-top</span></code> class to the <code><span class="code-n">batch-g</span></code> grid wrapper element to align cells to the top of each other.</p>
+            <h4>Vertically Align Top</h4>
+            <p>Add the <code><span class="code-n">batch-g--valign-top</span></code> class to the <code><span class="code-n">batch-g</span></code> grid wrapper element to vertically align cells to the top of each other.</p>
             <p class="comment">&lt;!-- Example Markup Code --&gt;</p>
 <pre class="pre-block">
   <code>
-    &lt;<span class="code-o">div</span> <span class="code-c">class</span>=<span class="code-n">"batch-g batch-g--gutter batch-g--padded batch-g--align-top"</span>&gt;
+    &lt;<span class="code-o">div</span> <span class="code-c">class</span>=<span class="code-n">"batch-g batch-g--gutter batch-g--padded batch-g--valign-top"</span>&gt;
      &lt;<span class="code-o">div</span> <span class="code-c">class</span>=<span class="code-n">"batch-u-1-3"</span>&gt;
      Knockeen hills irish poteen glenrothes jungle juice mudslide creamsicle polmos krakow? Irish flag speyside pink lady van winkle family reserve, man o'war cointreau cointreau glenkinchie pall mall; pisco sour. Chocolate soldier piña colada, ginza mary old mr. boston belvedere arran? Old bushmill's glenkinchie glenturret, sex on the beach; blair athol daiquiri bourbon lancer? Vodka sunrise lemon split fettercairn ballantine jack and coke harvey's bristol cream. Bundaberg champagne cocktail, gordon's paradise; gimlet aberlour piscola, flaming volcano glenlossie, moscow mule aberlour.
      &lt;<span class="code-o">/div</span>&gt;
@@ -739,7 +744,7 @@
   </code>
 </pre>
             <p class="comment">&lt;!-- Example Markup Result --&gt;</p>
-            <div class="batch-g batch-g--gutter batch-g--padded batch-g--align-top batch-g--docs">
+            <div class="batch-g batch-g--gutter batch-g--padded batch-g--valign-top batch-g--docs">
              <div class="batch-u-1-3">
               Knockeen hills irish poteen glenrothes jungle juice mudslide creamsicle polmos krakow? Irish flag speyside pink lady van winkle family reserve, man o'war cointreau cointreau glenkinchie pall mall; pisco sour. Chocolate soldier piña colada, ginza mary old mr. boston belvedere arran? Old bushmill's glenkinchie glenturret, sex on the beach; blair athol daiquiri bourbon lancer? Vodka sunrise lemon split fettercairn ballantine jack and coke harvey's bristol cream. Bundaberg champagne cocktail, gordon's paradise; gimlet aberlour piscola, flaming volcano glenlossie, moscow mule aberlour.
              </div>
@@ -753,11 +758,12 @@
           </section>
 
           <section class="l-section">
-            <p>Add the <code><span class="code-n">batch-g--align-center</span></code> class to the <code><span class="code-n">batch-g</span></code> grid wrapper element to align cells to the center of each other.</p>
+            <h4>Vertically Align Center</h4>
+            <p>Add the <code><span class="code-n">batch-g--valign-center</span></code> class to the <code><span class="code-n">batch-g</span></code> grid wrapper element to vertically align cells to the center of each other.</p>
             <p class="comment">&lt;!-- Example Markup Code --&gt;</p>
 <pre class="pre-block">
   <code>
-    &lt;<span class="code-o">div</span> <span class="code-c">class</span>=<span class="code-n">"batch-g batch-g--gutter batch-g--padded batch-g--align-center"</span>&gt;
+    &lt;<span class="code-o">div</span> <span class="code-c">class</span>=<span class="code-n">"batch-g batch-g--gutter batch-g--padded batch-g--valign-center"</span>&gt;
      &lt;<span class="code-o">div</span> <span class="code-c">class</span>=<span class="code-n">"batch-u-1-3"</span>&gt;
       Knockeen hills irish poteen glenrothes jungle juice mudslide creamsicle polmos krakow? Irish flag speyside pink lady van winkle family reserve, man o'war cointreau cointreau glenkinchie pall mall; pisco sour. Chocolate soldier piña colada, ginza mary old mr. boston belvedere arran? Old bushmill's glenkinchie glenturret, sex on the beach; blair athol daiquiri bourbon lancer? Vodka sunrise lemon split fettercairn ballantine jack and coke harvey's bristol cream. Bundaberg champagne cocktail, gordon's paradise; gimlet aberlour piscola, flaming volcano glenlossie, moscow mule aberlour.
      &lt;<span class="code-o">/div</span>&gt;
@@ -771,7 +777,7 @@
   </code>
 </pre>
             <p class="comment">&lt;!-- Example Markup Result --&gt;</p>
-            <div class="batch-g batch-g--gutter batch-g--padded batch-g--align-center batch-g--docs">
+            <div class="batch-g batch-g--gutter batch-g--padded batch-g--valign-center batch-g--docs">
              <div class="batch-u-1-3">
               Knockeen hills irish poteen glenrothes jungle juice mudslide creamsicle polmos krakow? Irish flag speyside pink lady van winkle family reserve, man o'war cointreau cointreau glenkinchie pall mall; pisco sour. Chocolate soldier piña colada, ginza mary old mr. boston belvedere arran? Old bushmill's glenkinchie glenturret, sex on the beach; blair athol daiquiri bourbon lancer? Vodka sunrise lemon split fettercairn ballantine jack and coke harvey's bristol cream. Bundaberg champagne cocktail, gordon's paradise; gimlet aberlour piscola, flaming volcano glenlossie, moscow mule aberlour.
              </div>
@@ -781,15 +787,23 @@
              <div class="batch-u-1-3">
               Chocolate soldier piña colada, ginza mary old mr. boston belvedere arran? Old bushmill's glenkinchie glenturret, sex on the beach; blair athol daiquiri bourbon lancer? Vodka sunrise lemon split fettercairn ballantine jack and coke harvey's bristol cream. Bundaberg champagne cocktail, gordon's paradise; gimlet aberlour piscola, flaming volcano glenlossie, moscow mule aberlour.
              </div>
+             <div class="batch-u-1-3">
+              Chocolate soldier piña colada, ginza mary old mr. boston belvedere arran? Old bushmill's glenkinchie glenturret, sex on the beach; blair athol daiquiri bourbon lancer? Vodka sunrise lemon split fettercairn ballantine jack and coke harvey's bristol cream. Bundaberg champagne cocktail, gordon's paradise; gimlet aberlour piscola, flaming volcano glenlossie, moscow mule aberlour.
+             </div>
+             <div class="batch-u-1-3">
+              Bundaberg champagne cocktail, gordon's paradise; gimlet aberlour piscola, flaming volcano glenlossie, moscow mule aberlour.
+             </div>
+
             </div>
           </section>
 
           <section class="l-section">
-            <p>Add the <code><span class="code-n">batch-g--align-bottom</span></code> class to the <code><span class="code-n">batch-g</span></code> grid wrapper element to align cells to the bottom of each other.</p>
+            <h4>Vertically Align Bottom</h4>
+            <p>Add the <code><span class="code-n">batch-g--valign-bottom</span></code> class to the <code><span class="code-n">batch-g</span></code> grid wrapper element to vertically align cells to the bottom of each other.</p>
             <p class="comment">&lt;!-- Example Markup Code --&gt;</p>
 <pre class="pre-block">
   <code>
-    &lt;<span class="code-o">div</span> <span class="code-c">class</span>=<span class="code-n">"batch-g batch-g--gutter batch-g--padded batch-g--align-bottom"</span>&gt;
+    &lt;<span class="code-o">div</span> <span class="code-c">class</span>=<span class="code-n">"batch-g batch-g--gutter batch-g--padded batch-g--valign-bottom"</span>&gt;
      &lt;<span class="code-o">div</span> <span class="code-c">class</span>=<span class="code-n">"batch-u-1-3"</span>&gt;
       Knockeen hills irish poteen glenrothes jungle juice mudslide creamsicle polmos krakow? Irish flag speyside pink lady van winkle family reserve, man o'war cointreau cointreau glenkinchie pall mall; pisco sour. Chocolate soldier piña colada, ginza mary old mr. boston belvedere arran? Old bushmill's glenkinchie glenturret, sex on the beach; blair athol daiquiri bourbon lancer? Vodka sunrise lemon split fettercairn ballantine jack and coke harvey's bristol cream. Bundaberg champagne cocktail, gordon's paradise; gimlet aberlour piscola, flaming volcano glenlossie, moscow mule aberlour.
      &lt;<span class="code-o">/div</span>&gt;
@@ -803,7 +817,7 @@
   </code>
 </pre>
             <p class="comment">&lt;!-- Example Markup Result --&gt;</p>
-            <div class="batch-g batch-g--gutter batch-g--padded batch-g--align-bottom batch-g--docs">
+            <div class="batch-g batch-g--gutter batch-g--padded batch-g--valign-bottom batch-g--docs">
              <div class="batch-u-1-3">
               Knockeen hills irish poteen glenrothes jungle juice mudslide creamsicle polmos krakow? Irish flag speyside pink lady van winkle family reserve, man o'war cointreau cointreau glenkinchie pall mall; pisco sour. Chocolate soldier piña colada, ginza mary old mr. boston belvedere arran? Old bushmill's glenkinchie glenturret, sex on the beach; blair athol daiquiri bourbon lancer? Vodka sunrise lemon split fettercairn ballantine jack and coke harvey's bristol cream. Bundaberg champagne cocktail, gordon's paradise; gimlet aberlour piscola, flaming volcano glenlossie, moscow mule aberlour.
              </div>
@@ -817,6 +831,7 @@
           </section>
 
           <section class="l-section">
+            <h4>Align Center</h4>
             <p>Add the <code><span class="code-n">batch-g--align-center</span></code> class to the <code><span class="code-n">batch-g</span></code> grid wrapper element to align cells to the center of the wrapper.</p>
             <p class="comment">&lt;!-- Example Markup Code --&gt;</p>
 <pre class="pre-block">
@@ -837,6 +852,7 @@
           </section>
 
           <section class="l-section">
+            <h4>Align Right</h4>
             <p>Add the <code><span class="code-n">batch-g--align-right</span></code> class to the <code><span class="code-n">batch-g</span></code> grid wrapper element to align cells to the right of the wrapper.</p>
             <p class="comment">&lt;!-- Example Markup Code --&gt;</p>
 <pre class="pre-block">
@@ -855,6 +871,13 @@
              </div>
             </div>
           </section>
+
+        </div>
+      </div>
+
+      <div id="installation-instructions" class="l-row l-row--amber">
+        <div class="l-container">
+          <h2><i class="fa fa-wrench"></i> Installation Instructions</h2>
 
         </div>
       </div>

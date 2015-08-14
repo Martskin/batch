@@ -8,31 +8,33 @@ body {
   line-height: $base-line-height;
 }
 
-h1 {
+@mixin heading-attributes($font-size) {
+  font-size: $font-size;
   font-family: $heading-font-family;
-  font-size: 2em;
   font-weight: $heading-font-weight;
   line-height: $heading-line-height;
   margin: 0 0 $small-spacing;
+}
+
+h1 {
+  @include heading-attributes(2.25em);
 }
 
 h2 {
-  font-family: $heading-font-family;
-  font-size: 1.75em;
-  font-weight: $heading-font-weight;
-  line-height: $heading-line-height;
-  margin: 0 0 $small-spacing;
+  @include heading-attributes(2em);
 }
 
-h3,
-h4,
+h3 {
+  @include heading-attributes(1.75em);
+}
+
+h4 {
+  @include heading-attributes(1.25em);
+}
+
 h5,
 h6 {
-  font-family: $heading-font-family;
-  font-size: 1.5em;
-  font-weight: $heading-font-weight;
-  line-height: $heading-line-height;
-  margin: 0 0 $small-spacing;
+  @include heading-attributes(1.15em);
 }
 
 p {

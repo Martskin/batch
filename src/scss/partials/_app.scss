@@ -56,6 +56,10 @@
 	}
 }
 
+.rotate-flip {
+	transform: rotate(90deg) scaleX(-1);
+}
+
 .feature-object {
 	text-align:center;
 	padding:0 $base-spacing;
