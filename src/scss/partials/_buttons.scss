@@ -1,3 +1,4 @@
+// Buttons
 
 .btn,
 button {
@@ -19,6 +20,7 @@ button {
   vertical-align: middle;
   white-space: nowrap;
   margin-right: $small-spacing;
+  text-align:center;
   @include media($medium-screen) {
     margin-right: $base-spacing;
   }

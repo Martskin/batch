@@ -2,9 +2,14 @@
 
 .l-row {
 	padding:$base-spacing $small-spacing;
+	overflow:hidden;
 	@include media($medium-screen) {
 		padding:$large-spacing $small-spacing;
 	}
+}
+
+.l-row--border-top {
+	border-top:1px solid $barrel-amber;
 }
 
 .l-row--amber {
@@ -12,9 +17,9 @@
 	background-color:$barrel-amber;
 }
 
-.l-row--brown {
+.l-row--green {
 	color:$white;
-	background-color:$barrel-brown;
+	background-color:$barrel-green;
 }
 
 .l-row--gold {
@@ -32,4 +37,8 @@
 
 .l-container {
 	@include outer-container($container-width);
+}
+
+.l-section {
+	margin-bottom:$medium-spacing;
 }
