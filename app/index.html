@@ -179,7 +179,7 @@
                   <h3>Extendable Units</h3>
                 </li>
                 <li class="feature-object_description">
-                  <a class="link--light link--underlined" href="#link" target="_blank">Add more sizes</a> to the <code>$unit-sizes</code> map to have the <code>single-batch()</code> mixin distill your custom unit classes. Requires <a class="link--light link--underlined" href="http://sass-lang.com/" target="_blank">Sass</a>, <a class="link--light link--underlined" href="http://bourbon.io/" target="_blank">Bourbon</a> and <a class="link--light link--underlined" href="http://neat.bourbon.io/" target="_blank">Neat</a>.
+                  <a class="link--light link--underlined" href="#unit-sizes"  data-behavior="smooth-scroll">Add more sizes</a> to the <code>$unit-sizes</code> map to have the <code>single-batch()</code> mixin distill your custom unit classes. Requires <a class="link--light link--underlined" href="http://sass-lang.com/" target="_blank">Sass</a>, <a class="link--light link--underlined" href="http://bourbon.io/" target="_blank">Bourbon</a> and <a class="link--light link--underlined" href="http://neat.bourbon.io/" target="_blank">Neat</a>.
                 </li>
               </ul>
             </div>
@@ -616,14 +616,14 @@
               </div>
             </div>
 
-            <p>Create custom unit sizes by adding to the <code><span class="code-o">$unit-sizes</span></code> Sass map in the <a href="#link">SCSS source file</a>.</p>
+            <p id="unit-sizes">Create custom unit sizes by adding to the <code><span class="code-o">$unit-sizes</span></code> Sass map in the <a href="#link">SCSS source file</a>.</p>
 <pre class="pre-block">
   <code>
     <span class="comment">
       // We'll loop through the $unit-sizes map to distill the cell classes.
       // The key is the numerator and then we
       // loop through the value array for each denominator.
-      // The key-value pair determines the name and is also used to calculate the width %.
+      // The key-value pair determines the name and is also used to calculate the width percentage.
       // Default sizes - 3rds, 4ths, 6ths, 8ths, 12ths and 24ths:
       // 1-1, 1-2, 1-3, 1-4, 1-6, 1-8, 1-12, 1-24
       // 2-3
@@ -657,7 +657,7 @@
           <h3><i class="fa fa-sliders"></i> Modifier Classes</h3>
 
           <section class="l-section">
-            <p>Add the <code><span class="code-n">batch-g--gutter</span></code> class to the <code><span class="code-n">batch-g</span></code> grid wrapper element to add a gutter between the cells. Adjsut the gutter size by changing the <code><span class="code-o">$batch-gutter</span></code> Sass variable in the <a href="#link">SCSS source file</a>.</p>
+            <p>Add the <code><span class="code-n">batch-g--gutter</span></code> class to the <code><span class="code-n">batch-g</span></code> grid wrapper element to add a gutter between the cells. Adjust the gutter size by changing the <code><span class="code-o">$batch-gutter</span></code> Sass variable in the <a href="#link">SCSS source file</a>.</p>
             <p class="comment">&lt;!-- Example Markup Code --&gt;</p>
 <pre class="pre-block">
   <code>
@@ -689,7 +689,7 @@
           </section>
 
           <section class="l-section">
-            <p>Add the <code><span class="code-n">batch-g--padded</span></code> class to the <code><span class="code-n">batch-g</span></code> grid wrapper element to add padding inside the cells. Adjsut the gutter size by changing the <code><span class="code-o">$batch-padding</span></code> Sass variable in the <a href="#link">SCSS source file</a>.</p>
+            <p>Add the <code><span class="code-n">batch-g--padded</span></code> class to the <code><span class="code-n">batch-g</span></code> grid wrapper element to add padding inside the cells. Adjust the gutter size by changing the <code><span class="code-o">$batch-padding</span></code> Sass variable in the <a href="#link">SCSS source file</a>.</p>
             <p class="comment">&lt;!-- Example Markup Code --&gt;</p>
 <pre class="pre-block">
   <code>
@@ -830,6 +830,26 @@
 </pre>
             <p class="comment">&lt;!-- Example Markup Result --&gt;</p>
             <div class="batch-g batch-g--gutter batch-g--padded batch-g--align-center batch-g--docs">
+             <div class="batch-u-1-3">
+              Grid Cell Unit 1
+             </div>
+            </div>
+          </section>
+
+          <section class="l-section">
+            <p>Add the <code><span class="code-n">batch-g--align-right</span></code> class to the <code><span class="code-n">batch-g</span></code> grid wrapper element to align cells to the right of the wrapper.</p>
+            <p class="comment">&lt;!-- Example Markup Code --&gt;</p>
+<pre class="pre-block">
+  <code>
+    &lt;<span class="code-o">div</span> <span class="code-c">class</span>=<span class="code-n">"batch-g batch-g--gutter batch-g--padded batch-g--align-right"</span>&gt;
+     &lt;<span class="code-o">div</span> <span class="code-c">class</span>=<span class="code-n">"batch-u-1-3"</span>&gt;
+      Grid Cell Unit 1
+     &lt;<span class="code-o">/div</span>&gt;
+    &lt;<span class="code-o">/div</span>&gt;
+  </code>
+</pre>
+            <p class="comment">&lt;!-- Example Markup Result --&gt;</p>
+            <div class="batch-g batch-g--gutter batch-g--padded batch-g--align-right batch-g--docs">
              <div class="batch-u-1-3">
               Grid Cell Unit 1
              </div>
