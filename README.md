@@ -3,7 +3,6 @@
 
 
 #Batch
-
 A simple, responsive, flexbox grid system.
 
 *This is currently a work in progress*
@@ -12,6 +11,9 @@ A simple, responsive, flexbox grid system.
 
 ###Basic Usage
 ``<div class="batch-u-1-1 batch-u-md-1-2 batch-u-lg-1-4"></div>``
+
+##Documentation (Coming Soon)
+[Batch Documentation](https://martskin.github.io/batch)
 
 
 ###Build
