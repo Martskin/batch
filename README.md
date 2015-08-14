@@ -10,7 +10,11 @@ A simple, responsive, flexbox grid system.
 *Version 1.0.0*
 
 ###Basic Usage
-``<div class="batch-u-1-1 batch-u-md-1-2 batch-u-lg-1-4"></div>``
+```html
+<div class="batch-g batch-g--gutter batch-g--padded ">
+	<div class="batch-u-1-1 batch-u-md-1-2 batch-u-lg-1-4"></div>
+</div>
+```
 
 ##Documentation (Coming Soon)
 [Batch Documentation](https://martskin.github.io/batch)
