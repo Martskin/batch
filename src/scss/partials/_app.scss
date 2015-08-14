@@ -108,11 +108,10 @@ code {
 
 .batch-g--docs {
 	background:$barrel-gold-light;
-	margin:0 0 $medium-spacing;
+	margin:0 (-$batch-gutter);
 	padding: $batch-gutter $batch-gutter/2 0 $batch-gutter/2;
 	[class^="batch-u"] {
 		background:#ffffff;
-		padding:$batch-gutter;
 		border-color:$barrel-gold-light;
 	}
 }

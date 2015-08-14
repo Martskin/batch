@@ -41,4 +41,7 @@
 
 .l-section {
 	margin-bottom:$medium-spacing;
+	&:last-of-type {
+		margin-bottom: 0;
+	}
 }

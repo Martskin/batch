@@ -61,11 +61,6 @@ $unit-sizes : (
 	@include single-batch('-lg');
 }
 
-// Batch container
-.batch-c {
-	overflow:hidden;
-}
-
 // Batch grid
 .batch-g {
 	@include align-items(stretch);
@@ -88,4 +83,22 @@ $unit-sizes : (
 		padding:$batch-padding;
 	}
 }
+
+.batch-g--align-top {
+	@include align-items(flex-start);
+}
+
+.batch-g--align-center {
+	@include align-items(center);
+}
+
+.batch-g--align-bottom {
+	@include align-items(flex-end);
+}
+
+.batch-g--align-center {
+	@include justify-content(center);
+}
+
+
 
