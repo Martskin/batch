@@ -5,8 +5,6 @@
 #Batch
 A simple, responsive, flexbox grid system.
 
-*This is currently a work in progress*
-
 *Version 1.0.0*
 
 ###Basic Usage
