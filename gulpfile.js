@@ -24,16 +24,16 @@ var banner = [
 ].join('');
 
 gulp.task('css', function () {
-    return gulp.src('src/scss/style.scss')
+    return gulp.src('src/scss/*.scss')
     .pipe(sass({
       errLogToConsole: true,
       includePaths: ['styles'].concat(neat)
     }))
     .pipe(autoprefixer('last 4 version'))
+    .pipe(header(banner, { package : package }))
     .pipe(gulp.dest('app/assets/css'))
     .pipe(minifyCSS())
     .pipe(rename({ suffix: '.min' }))
-    .pipe(header(banner, { package : package }))
     .pipe(gulp.dest('app/assets/css'))
     .pipe(browserSync.reload({stream:true}));
 });
