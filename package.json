@@ -3,7 +3,7 @@
   "title": "A simple, responsive, flexbox grid system.",
   "author": "Martin Hofmann",
   "url": "https://github.com/Martskin/batch",
-  "version": "1.0",
+  "version": "1.0.0",
   "license": "GPL-2.0",
   "repository": {
     "type": "git",
