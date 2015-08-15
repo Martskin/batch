@@ -152,6 +152,7 @@ code {
 }
 
 .batch-g--templates {
+	margin-bottom:$small-spacing;
 	header {
 		@include template-shared($barrel-gold, 65px);
 	}

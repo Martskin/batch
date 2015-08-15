@@ -8,8 +8,9 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     minifyCSS = require('gulp-minify-css'),
     neat = require('node-neat').includePaths,
-    package = require('./package.json');
-
+    package = require('./package.json'),
+    dist_dir = 'app/assets/css';
+    temp_dir = 'app/templates/css';
 
 var banner = [
   '/*!\n' +
@@ -31,10 +32,12 @@ gulp.task('css', function () {
     }))
     .pipe(autoprefixer('last 4 version'))
     .pipe(header(banner, { package : package }))
-    .pipe(gulp.dest('app/assets/css'))
+    .pipe(gulp.dest(dist_dir))
+    .pipe(gulp.dest(temp_dir))
     .pipe(minifyCSS())
     .pipe(rename({ suffix: '.min' }))
-    .pipe(gulp.dest('app/assets/css'))
+    .pipe(gulp.dest(dist_dir))
+    .pipe(gulp.dest(temp_dir))
     .pipe(browserSync.reload({stream:true}));
 });
 

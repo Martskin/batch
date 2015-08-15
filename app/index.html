@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js">
   <head>
     <meta charset="utf-8">
@@ -15,7 +15,7 @@
 
     <link href='http://fonts.googleapis.com/css?family=Raleway:500' rel='stylesheet' type='text/css'>
     <link href="assets/css/batch.min.css" rel="stylesheet">
-    <link href="assets/css/style.min.css" rel="stylesheet">
+    <link href="assets/css/docs.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="icon" type="image/png" href="favicon.png">
@@ -39,11 +39,11 @@
                   <a href="#templates" class="btn btn--small btn--secondary" data-behavior="smooth-scroll"><i class="fa fa-clone"></i> Templates</a>
                 </li>
                 <li class="utilities_item">
-                  <a href="#link" class="btn">
+                  <a id="clickme" href="releases/1.0/batch-v1.0.css.zip" class="btn" data-object="css-zip">
                     <div>Download v1.0 <span class="btn_notes">(CSS)</span></div>
                     <div class="btn_notes hide-sm">Precompiled & ready to use.</div>
                   </a>
-                  <a href="#link" class="btn btn--secondary">
+                  <a href="releases/1.0/batch-v1.0.scss.zip" class="btn btn--secondary" data-object="scss-zip">
                     <div>Download v1.0 <span class="btn_notes">(SCSS)</span></div>
                     <div class="btn_notes hide-sm">Requires Bourbon and Neat.</div>
                   </a>
@@ -168,7 +168,7 @@
                   <h3>Easy To Use</h3>
                 </li>
                 <li class="feature-object_description">
-                  <p>Download the precompiled <a class="link--light link--underlined" href="#link" target="_blank">CSS</a> or the <a class="link--light link--underlined" href="#link" target="_blank">SCSS</a> source file. Read the <a class="link--light link--underlined" href="#installation-instructions" data-behavior="smooth-scroll">installation instructions</a> to add Batch to your project.</p>
+                  <p>Download the precompiled <a class="link--light link--underlined" href="#link" target="_blank" data-behavior="trigger-click" data-target="css-zip">CSS</a> or the <a class="link--light link--underlined" href="#link" target="_blank" data-behavior="trigger-click" data-target="scss-zip">SCSS</a> source file. Read the <a class="link--light link--underlined" href="#installation-instructions" data-behavior="smooth-scroll">installation instructions</a> to add Batch to your project.</p>
                 </li>
               </ul>
             </div>
@@ -624,7 +624,7 @@
             </div>
 
             <h4 id="cell-sizes">Custom Cell Sizes</h4>
-            <p>Create your own cell sizes by adding to the <code><span class="code-o">$cell-sizes</span></code> Sass map in the <a href="#link">SCSS source file</a>. The key is the numerator and then the <code><span class="code-n">small-batch()</span></code> mixin loops through the value array for each denominator. The key-value pair is used in the class name and is also used to calculate the width percentage.</p>
+            <p>Create your own cell sizes by adding to the <code><span class="code-o">$cell-sizes</span></code> Sass map in the <a href="#link" data-behavior="trigger-click" data-target="scss-zip">SCSS source file</a>. The key is the numerator and then the <code><span class="code-n">small-batch()</span></code> mixin loops through the value array for each denominator. The key-value pair is used in the class name and is also used to calculate the width percentage.</p>
 <pre class="pre-block">
   <code>
     <span class="comment">
@@ -662,7 +662,7 @@
 
           <section class="l-section">
             <h4>Grid Border</h4>
-            <p>Add the <code><span class="code-n">batch-g--border</span></code> class to the <code><span class="code-n">batch-g</span></code> grid wrapper element to add a border around the cells. Adjust the border color by changing the <code><span class="code-o">$batch-border</span></code> Sass variable in the <a href="#link">SCSS source file</a>.</p>
+            <p>Add the <code><span class="code-n">batch-g--border</span></code> class to the <code><span class="code-n">batch-g</span></code> grid wrapper element to add a border around the cells. Adjust the border color by changing the <code><span class="code-o">$batch-border</span></code> Sass variable in the <a href="#link" data-behavior="trigger-click" data-target="scss-zip">SCSS source file</a>.</p>
             <p class="comment">&lt;!-- Example Markup Code --&gt;</p>
 <pre class="pre-block">
   <code>
@@ -695,7 +695,7 @@
 
           <section class="l-section">
             <h4>Grid Gutter</h4>
-            <p>Add the <code><span class="code-n">batch-g--gutter</span></code> class to the <code><span class="code-n">batch-g</span></code> grid wrapper element to add a gutter between the cells. Adjust the gutter size by changing the <code><span class="code-o">$batch-gutter</span></code> Sass variable in the <a href="#link">SCSS source file</a>.</p>
+            <p>Add the <code><span class="code-n">batch-g--gutter</span></code> class to the <code><span class="code-n">batch-g</span></code> grid wrapper element to add a gutter between the cells. Adjust the gutter size by changing the <code><span class="code-o">$batch-gutter</span></code> Sass variable in the <a href="#link" data-behavior="trigger-click" data-target="scss-zip">SCSS source file</a>.</p>
             <p class="comment">&lt;!-- Example Markup Code --&gt;</p>
 <pre class="pre-block">
   <code>
@@ -728,7 +728,7 @@
 
           <section class="l-section">
             <h4>Cell Padding</h4>
-            <p>Add the <code><span class="code-n">batch-g--padding</span></code> class to the <code><span class="code-n">batch-g</span></code> grid wrapper element to add padding inside the cells. Adjust the padding size by changing the <code><span class="code-o">$batch-padding</span></code> Sass variable in the <a href="#link">SCSS source file</a>.</p>
+            <p>Add the <code><span class="code-n">batch-g--padding</span></code> class to the <code><span class="code-n">batch-g</span></code> grid wrapper element to add padding inside the cells. Adjust the padding size by changing the <code><span class="code-o">$batch-padding</span></code> Sass variable in the <a href="#link" data-behavior="trigger-click" data-target="scss-zip">SCSS source file</a>.</p>
             <p class="comment">&lt;!-- Example Markup Code --&gt;</p>
 <pre class="pre-block">
   <code>
@@ -942,7 +942,7 @@
 
           <section class="l-section">
             <h3>Precompiled CSS</h3>
-            <p>Download the <a class="link--light link--underlined" href="#link">minified CSS file</a> and reference the external style sheet in the head section of your HTML document. Or copy the styles from the <a class="link--light link--underlined" href="#link">dev CSS file</a> into your project's stylesheet</p>
+            <p>Download the <a class="link--light link--underlined" href="#link" data-behavior="trigger-click" data-target="css-zip">minified CSS file</a> and reference the external style sheet in the head section of your HTML document. Or copy the styles from the <a class="link--light link--underlined" href="#link" data-behavior="trigger-click" data-target="css-zip">dev CSS file</a> into your project's stylesheet</p>
 <pre class="pre-block">
   <code>
     &lt;<span class="code-o">head</span>&gt;
@@ -954,7 +954,7 @@
 
           <section class="l-section">
             <h3>SCSS Source File</h3>
-            <p>Download the <a class="link--light link--underlined" href="#link">SCSS source file</a> and import Batch after <a class="link--light link--underlined" href="http://bourbon.io/" target="_blank">Bourbon</a> and <a class="link--light link--underlined" href="http://neat.bourbon.io/" target="_blank">Neat</a> in your main manifest file.</p>
+            <p>Download the <a class="link--light link--underlined" href="#link" data-behavior="trigger-click" data-target="scss-zip">SCSS source file</a> and import Batch after <a class="link--light link--underlined" href="http://bourbon.io/" target="_blank">Bourbon</a> and <a class="link--light link--underlined" href="http://neat.bourbon.io/" target="_blank">Neat</a> in your main manifest file.</p>
 <pre class="pre-block">
   <code>
     <span class="code-o">@import</span> "<span class="code-n">bourbon</span>";
@@ -989,8 +989,8 @@
                   </footer>
                 </div>
                 <p>2 Column <span class="hide-sm">Template</span></p>
-                <a href="#link" target="_blank" class="btn btn--secondary btn--small"><i class="fa fa-eye"></i> <span class="hide-sm">View</span></a>
-                <a href="#link" class="btn btn--secondary btn--small"><i class="fa fa-download"></i> <span class="hide-sm">Download</span></a>
+                <a href="templates/batch-template-2-column.html" class="btn btn--secondary btn--small"><i class="fa fa-eye"></i> <span class="hide-sm">View</span></a>
+                <a href="templates/batch-templates.zip" class="btn btn--secondary btn--small"><i class="fa fa-download"></i> <span class="hide-sm">Download</span></a>
               </div>
               <div class="batch-c-1-2 batch-c-lg-1-4">
                 <div class="batch-g batch-g--padding batch-g--templates">
@@ -1008,8 +1008,8 @@
                   </footer>
                 </div>
                 <p>2 Column Article <span class="hide-sm">Template</span></p>
-                <a href="#link" target="_blank" class="btn btn--secondary btn--small"><i class="fa fa-eye"></i> <span class="hide-sm">View</span></a>
-                <a href="#link" class="btn btn--secondary btn--small"><i class="fa fa-download"></i> <span class="hide-sm">Download</span></a>
+                <a href="templates/batch-template-2-column-article.html" class="btn btn--secondary btn--small"><i class="fa fa-eye"></i> <span class="hide-sm">View</span></a>
+                <a href="templates/batch-templates.zip" class="btn btn--secondary btn--small"><i class="fa fa-download"></i> <span class="hide-sm">Download</span></a>
               </div>
               <div class="batch-c-1-2 batch-c-lg-1-4">
                 <div class="batch-g batch-g--padding batch-g--templates">
@@ -1030,8 +1030,8 @@
                   </footer>
                 </div>
                 <p>3 Column <span class="hide-sm">Template</span></p>
-                <a href="#link" target="_blank" class="btn btn--secondary btn--small"><i class="fa fa-eye"></i> <span class="hide-sm">View</span></a>
-                <a href="#link" class="btn btn--secondary btn--small"><i class="fa fa-download"></i> <span class="hide-sm">Download</span></a>
+                <a href="templates/batch-template-3-column.html" class="btn btn--secondary btn--small"><i class="fa fa-eye"></i> <span class="hide-sm">View</span></a>
+                <a href="templates/batch-templates.zip" class="btn btn--secondary btn--small"><i class="fa fa-download"></i> <span class="hide-sm">Download</span></a>
               </div>
               <div class="batch-c-1-2 batch-c-lg-1-4">
                 <div class="batch-g batch-g--padding batch-g--align-center batch-g--templates">
@@ -1046,8 +1046,8 @@
                   </footer>
                 </div>
                 <p>1 Column Stream <span class="hide-sm">Template</span></p>
-                <a href="#link" target="_blank" class="btn btn--secondary btn--small"><i class="fa fa-eye"></i> <span class="hide-sm">View</span></a>
-                <a href="#link" class="btn btn--secondary btn--small"><i class="fa fa-download"></i> <span class="hide-sm">Download</span></a>
+                <a href="templates/batch-template-1-column-stream.html" class="btn btn--secondary btn--small"><i class="fa fa-eye"></i> <span class="hide-sm">View</span></a>
+                <a href="templates/batch-templates.zip" class="btn btn--secondary btn--small"><i class="fa fa-download"></i> <span class="hide-sm">Download</span></a>
               </div>
             </div>
           </section>

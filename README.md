@@ -1,5 +1,5 @@
 
-![batch-logo](https://cloud.githubusercontent.com/assets/3717760/9235349/44fe54fc-410c-11e5-8465-08823050af6e.png)
+[![batch-logo](https://martskin.github.io/batch/assets/img/batch-logo-small.svg)](https://martskin.github.io/batch)
 
 
 #Batch
@@ -7,11 +7,11 @@ A simple, responsive, flexbox grid system.
 
 *This is currently a work in progress*
 
-*Version 1.0*
+*Version 1.0.0*
 
 ###Basic Usage
 ```html
-<div class="batch-g batch-g--border batch-g--gutter batch-g--padding ">
+<div class="batch-g batch-g--border batch-g--gutter batch-g--padding">
 	<div class="batch-c-1-1 batch-c-md-1-2 batch-c-lg-1-3">
 		Grid Cell 1
 	</div>
@@ -30,14 +30,14 @@ A simple, responsive, flexbox grid system.
 
 Import Batch after [Bourbon](http://bourbon.io/) and [Neat](http://neat.bourbon.io/) in your main manifest file
 
-```ruby
+```scss
 	@import "bourbon";
     @import "neat";
     @import "_batch.scss";
 ```
 
 ##Documentation
-[Batch Documentation (Coming Soon!)](https://martskin.github.io/batch)
+[Batch Documentation](https://martskin.github.io/batch)
 
 
 ###Docs Build
