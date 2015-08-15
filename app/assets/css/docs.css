@@ -727,36 +727,38 @@ code {
   .batch-g--dl > [class^="batch-c"]:nth-child(odd) {
     text-align: right; }
 
-.batch-g--templates header {
-  color: #ffffff;
-  text-align: center;
-  background: #EC5B05; }
-  @media screen and (min-width: 40em) {
-    .batch-g--templates header {
-      height: 65px; } }
-.batch-g--templates aside {
-  color: #ffffff;
-  text-align: center;
-  background: #BF3100; }
-  @media screen and (min-width: 40em) {
-    .batch-g--templates aside {
-      height: 200px; } }
-  .batch-g--templates aside:nth-of-type(2) {
-    opacity: 0.7; }
-.batch-g--templates main {
-  color: #ffffff;
-  text-align: center;
-  background: #8EA604; }
-  @media screen and (min-width: 40em) {
-    .batch-g--templates main {
-      height: 200px; } }
-.batch-g--templates footer {
-  color: #ffffff;
-  text-align: center;
-  background: #333; }
-  @media screen and (min-width: 40em) {
-    .batch-g--templates footer {
-      height: 65px; } }
+.batch-g--templates {
+  margin-bottom: 0.75em; }
+  .batch-g--templates header {
+    color: #ffffff;
+    text-align: center;
+    background: #EC5B05; }
+    @media screen and (min-width: 40em) {
+      .batch-g--templates header {
+        height: 65px; } }
+  .batch-g--templates aside {
+    color: #ffffff;
+    text-align: center;
+    background: #BF3100; }
+    @media screen and (min-width: 40em) {
+      .batch-g--templates aside {
+        height: 200px; } }
+    .batch-g--templates aside:nth-of-type(2) {
+      opacity: 0.7; }
+  .batch-g--templates main {
+    color: #ffffff;
+    text-align: center;
+    background: #8EA604; }
+    @media screen and (min-width: 40em) {
+      .batch-g--templates main {
+        height: 200px; } }
+  .batch-g--templates footer {
+    color: #ffffff;
+    text-align: center;
+    background: #333; }
+    @media screen and (min-width: 40em) {
+      .batch-g--templates footer {
+        height: 65px; } }
 
 .highlight {
   color: #333;
