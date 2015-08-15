@@ -37,7 +37,7 @@ Import Batch after [Bourbon](http://bourbon.io/) and [Neat](http://neat.bourbon.
 ```
 
 ##Documentation
-[Batch Documentation (Coming Soon!)](https://martskin.github.io/batch)
+[Batch Documentation](https://martskin.github.io/batch)
 
 
 ###Docs Build
