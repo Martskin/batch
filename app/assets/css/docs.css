@@ -707,8 +707,7 @@ code {
   background: #fff6f1;
   margin: 0 -5px; }
   .batch-g--docs [class^="batch-c"] {
-    background: #ffffff;
-    border-color: #fff6f1; }
+    background: #ffffff; }
 
 .batch-g--border-lg {
   background: #EC5B05; }

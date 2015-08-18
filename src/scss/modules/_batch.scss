@@ -50,8 +50,15 @@ $cell-sizes : (
 @mixin small-batch($breakpoint:'') {
 	@each $key, $cell-size in $cell-sizes {
 		@for $i from 1 to (length($cell-size)+1) {
+			$cell-size-percentage: (percentage($key/nth($cell-size, $i)));
 			.batch-c#{$breakpoint}-#{$key}-#{nth($cell-size, $i)} {
-				@include flex(0 0 percentage($key/nth($cell-size, $i)) );
+				@include flex(0 0 $cell-size-percentage);
+			}
+			.batch-g--gutter {
+				> .batch-c#{$breakpoint}-#{$key}-#{nth($cell-size, $i)} {
+					@include flex(0 0 calc(#{$cell-size-percentage} - #{$batch-gutter}));
+					margin: ($batch-gutter/2);
+				}
 			}
 		}
 	}
@@ -81,24 +88,12 @@ $cell-sizes : (
 
 .batch-g--border {
 	> [class^="batch-c"] {
-		position: relative;
-		&:before {
-			border:$batch-border solid $batch-border-color;
-			content:'';
-			display: block;
-			@include position(absolute, 0);
-			pointer-events: none;
-		}
+		border:$batch-border solid $batch-border-color;
 	}
 }
 
 .batch-g--gutter {
 	margin:0 (-$batch-gutter/2);
-	> [class^="batch-c"] {
-		border-width:$batch-gutter/2;
-		border-style:solid;
-		border-color:transparent;
-	}
 }
 
 .batch-g--padding {
