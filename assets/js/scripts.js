@@ -32,7 +32,7 @@
 
 		$('[data-behavior="trigger-click"]').click(function(e){
 			e.preventDefault();
-			var link = $(this).data("target");
+			var link = $(this).data('target');
 			$('[data-object="'+link+'"]')[0].click();
 		});
 

@@ -45,7 +45,7 @@
                   </a>
                   <a href="releases/1.0.0/batch-v1.0.0.scss.zip" class="btn btn--secondary" data-object="scss-zip">
                     <div>Download v1.0.0 <span class="btn_notes">(SCSS)</span></div>
-                    <div class="btn_notes hide-sm">Requires Bourbon and Neat.</div>
+                    <div class="btn_notes hide-sm">Requires Bourbon.</div>
                   </a>
                 </li>
               </ul>
@@ -181,7 +181,7 @@
                   <h3>Extendable Cell Sizes</h3>
                 </li>
                 <li class="feature-object_description">
-                  <a class="link--light link--underlined" href="#cell-sizes" data-behavior="smooth-scroll">Add more sizes</a> to the <code>$cell-sizes</code> map to have the <code>small-batch()</code> mixin distill your custom cell classes. Requires <a class="link--light link--underlined" href="http://sass-lang.com/" target="_blank">Sass</a>, <a class="link--light link--underlined" href="http://bourbon.io/" target="_blank">Bourbon</a> and <a class="link--light link--underlined" href="http://neat.bourbon.io/" target="_blank">Neat</a>.
+                  <a class="link--light link--underlined" href="#cell-sizes" data-behavior="smooth-scroll">Add more sizes</a> to the <code>$cell-sizes</code> map to have the <code>small-batch()</code> mixin distill your custom cell classes. Requires <a class="link--light link--underlined" href="http://sass-lang.com/" target="_blank">Sass</a> and <a class="link--light link--underlined" href="http://bourbon.io/" target="_blank">Bourbon</a>.
                 </li>
               </ul>
             </div>
@@ -228,7 +228,7 @@
       <div class="l-row">
         <div class="l-container">
 
-          <section class="l-section">
+          <section id="basic-usage" class="l-section">
             <h3><i class="fa fa-puzzle-piece"></i> Basic Usage</h3>
             <p>This example demonstrates how to set the width of a cell at <span class="strong">all</span> screen sizes.</p>
             <div class="batch-g batch-g--gutter batch-g--padding batch-g--docs">
@@ -297,7 +297,7 @@
             </div>
           </section>
         
-           <section class="l-section">
+           <section id="responsive-usage" class="l-section">
             <h3><i class="fa fa-arrows-h"></i> Responsive Usage</h3>
             <p>This example demonstrates how to set the width of a cell at <span class="strong">mobile</span> ( <code><span class="code-n">batch-c-</span></code> ), <span class="strong">tablet</span> ( <code><span class="code-n">batch-c-md-</span></code> ) and <span class="strong">desktop</span> ( <code><span class="code-n">batch-c-lg-</span></code> ) screen sizes.</p>
             <div class="batch-g batch-g--gutter batch-g--padding batch-g--docs">
@@ -376,7 +376,7 @@
             </div>
           </section>
 
-          <section class="l-section">
+          <section id="grid-cell-classes" class="l-section">
 
             <h3><i class="fa fa-th"></i> Grid Cell Classes</h3>
             <p>Default available cell sizes are 3rds, 4ths, 6ths, 8ths, 12ths and 24ths. Equivalent fractions are simplified. For example, <code><span class="code-n">batch-c-1-2</span></code> and <code><span class="code-n">batch-c-12-24</span></code> both equal <span class="strong">50%</span>, so only <code><span class="code-n">batch-c-1-2</span></code> is made available.</p>
@@ -658,9 +658,9 @@
 
           </section>
 
-          <h3><i class="fa fa-sliders"></i> Modifier Classes</h3>
+          <h3 id="modifier-classes"><i class="fa fa-sliders"></i> Modifier Classes</h3>
 
-          <section class="l-section">
+          <section id="grid-border" class="l-section">
             <h4>Grid Border</h4>
             <p>Add the <code><span class="code-n">batch-g--border</span></code> class to the <code><span class="code-n">batch-g</span></code> grid wrapper element to add a border around the cells. Adjust the border size and color by changing the <code><span class="code-o">$batch-border</span></code> and <code><span class="code-o">$batch-border-color</span></code> Sass variables in the <a href="#link" data-behavior="trigger-click" data-target="scss-zip">SCSS source file</a>.</p>
             <p class="comment">&lt;!-- Example Markup Code --&gt;</p>
@@ -693,7 +693,7 @@
             </div>
           </section>
 
-          <section class="l-section">
+          <section id="grid-gutter" class="l-section">
             <h4>Grid Gutter</h4>
             <p>Add the <code><span class="code-n">batch-g--gutter</span></code> class to the <code><span class="code-n">batch-g</span></code> grid wrapper element to add a gutter between the cells. Adjust the gutter size by changing the <code><span class="code-o">$batch-gutter</span></code> Sass variable in the <a href="#link" data-behavior="trigger-click" data-target="scss-zip">SCSS source file</a>.</p>
             <p class="comment">&lt;!-- Example Markup Code --&gt;</p>
@@ -726,7 +726,7 @@
             </div>
           </section>
 
-          <section class="l-section">
+          <section id="cell-padding" class="l-section">
             <h4>Cell Padding</h4>
             <p>Add the <code><span class="code-n">batch-g--padding</span></code> class to the <code><span class="code-n">batch-g</span></code> grid wrapper element to add padding inside the cells. Adjust the padding size by changing the <code><span class="code-o">$batch-padding</span></code> Sass variable in the <a href="#link" data-behavior="trigger-click" data-target="scss-zip">SCSS source file</a>.</p>
             <p class="comment">&lt;!-- Example Markup Code --&gt;</p>
@@ -759,7 +759,7 @@
             </div>
           </section>
 
-          <section class="l-section">
+          <section id="reverse-direction" class="l-section">
             <h4>Reverse Direction</h4>
             <p>Add the <code><span class="code-n">batch-g--reverse</span></code> class to the <code><span class="code-n">batch-g</span></code> grid wrapper element to reverse the cells to display right to left.</p>
             <p class="comment">&lt;!-- Example Markup Code --&gt;</p>
@@ -792,7 +792,7 @@
             </div>
           </section>
 
-          <section class="l-section">
+          <section id="vertically-align-top" class="l-section">
             <h4>Vertically Align Top</h4>
             <p>Add the <code><span class="code-n">batch-g--valign-top</span></code> class to the <code><span class="code-n">batch-g</span></code> grid wrapper element to vertically align cells to the top of each other.</p>
             <p class="comment">&lt;!-- Example Markup Code --&gt;</p>
@@ -825,7 +825,7 @@
             </div>
           </section>
 
-          <section class="l-section">
+          <section id="vertically-align-center" class="l-section">
             <h4>Vertically Align Center</h4>
             <p>Add the <code><span class="code-n">batch-g--valign-center</span></code> class to the <code><span class="code-n">batch-g</span></code> grid wrapper element to vertically align cells to the center of each other.</p>
             <p class="comment">&lt;!-- Example Markup Code --&gt;</p>
@@ -858,7 +858,7 @@
             </div>
           </section>
 
-          <section class="l-section">
+          <section id="vertically-align-bottom" class="l-section">
             <h4>Vertically Align Bottom</h4>
             <p>Add the <code><span class="code-n">batch-g--valign-bottom</span></code> class to the <code><span class="code-n">batch-g</span></code> grid wrapper element to vertically align cells to the bottom of each other.</p>
             <p class="comment">&lt;!-- Example Markup Code --&gt;</p>
@@ -891,7 +891,7 @@
             </div>
           </section>
 
-          <section class="l-section">
+          <section id="align-center" class="l-section">
             <h4>Align Center</h4>
             <p>Add the <code><span class="code-n">batch-g--align-center</span></code> class to the <code><span class="code-n">batch-g</span></code> grid wrapper element to align cells to the center of the wrapper.</p>
             <p class="comment">&lt;!-- Example Markup Code --&gt;</p>
@@ -912,7 +912,7 @@
             </div>
           </section>
 
-          <section class="l-section">
+          <section id="align-right" class="l-section">
             <h4>Align Right</h4>
             <p>Add the <code><span class="code-n">batch-g--align-right</span></code> class to the <code><span class="code-n">batch-g</span></code> grid wrapper element to align cells to the right of the wrapper.</p>
             <p class="comment">&lt;!-- Example Markup Code --&gt;</p>
@@ -940,7 +940,7 @@
         <div class="l-container">
           <h2><i class="fa fa-wrench"></i> Installation <span class="hide-sm">Instructions</span></h2>
 
-          <section class="l-section">
+          <section id="precompiled-css" class="l-section">
             <h3>Precompiled CSS</h3>
             <p>Download the <a class="link--light link--underlined" href="#link" data-behavior="trigger-click" data-target="css-zip">minified CSS file</a> and reference the external style sheet in the head section of your HTML document. Or copy the styles from the <a class="link--light link--underlined" href="#link" data-behavior="trigger-click" data-target="css-zip">dev CSS file</a> into your project's stylesheet</p>
 <pre class="pre-block">
@@ -952,13 +952,12 @@
 </pre>
           </section>
 
-          <section class="l-section">
+          <section id="scss-source-file" class="l-section">
             <h3>SCSS Source File</h3>
-            <p>Download the <a class="link--light link--underlined" href="#link" data-behavior="trigger-click" data-target="scss-zip">SCSS source file</a> and import Batch after <a class="link--light link--underlined" href="http://bourbon.io/" target="_blank">Bourbon</a> and <a class="link--light link--underlined" href="http://neat.bourbon.io/" target="_blank">Neat</a> in your main manifest file.</p>
+            <p>Download the <a class="link--light link--underlined" href="#link" data-behavior="trigger-click" data-target="scss-zip">SCSS source file</a> and import Batch after <a class="link--light link--underlined" href="http://bourbon.io/" target="_blank">Bourbon</a> in your main manifest file.</p>
 <pre class="pre-block">
   <code>
     <span class="code-o">@import</span> "<span class="code-n">bourbon</span>";
-    <span class="code-o">@import</span> "<span class="code-n">neat</span>";
     <span class="code-o">@import</span> "<span class="code-n">_batch.scss</span>";
   </code>
 </pre>
