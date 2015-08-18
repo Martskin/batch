@@ -52,11 +52,12 @@ $cell-sizes : (
 		@for $i from 1 to (length($cell-size)+1) {
 			$cell-size-percentage: (percentage($key/nth($cell-size, $i)));
 			.batch-c#{$breakpoint}-#{$key}-#{nth($cell-size, $i)} {
-				@include flex(0 0 $cell-size-percentage);
+				@include flex(0 0 auto);
+				width:$cell-size-percentage;
 			}
 			.batch-g--gutter {
 				> .batch-c#{$breakpoint}-#{$key}-#{nth($cell-size, $i)} {
-					@include flex(0 0 calc(#{$cell-size-percentage} - #{$batch-gutter}));
+					width:calc(#{$cell-size-percentage} - #{$batch-gutter});
 					margin: ($batch-gutter/2);
 				}
 			}
