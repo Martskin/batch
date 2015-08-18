@@ -24,13 +24,12 @@ A simple, responsive, flexbox grid system.
 
 ![basic-usage](https://cloud.githubusercontent.com/assets/3717760/9275606/3f007484-426c-11e5-9b05-94671aaaf562.png)
 
-##Requires Bourbon and Neat
+##Requires Bourbon
 
-Import Batch after [Bourbon](http://bourbon.io/) and [Neat](http://neat.bourbon.io/) in your main manifest file
+Import Batch after [Bourbon](http://bourbon.io/) in your main manifest file
 
 ```scss
 	@import "bourbon";
-    @import "neat";
     @import "_batch.scss";
 ```
 
