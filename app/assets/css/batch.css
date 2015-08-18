@@ -6,12 +6,6 @@
  * @version 1.0.0
  * Copyright 2015. GPL-2.0 licensed.
  */
-html {
-  box-sizing: border-box; }
-
-*, *::after, *::before {
-  box-sizing: inherit; }
-
 .batch-c-1-1 {
   box-flex: 0;
   -webkit-flex: 0 0 auto;
@@ -300,7 +294,7 @@ html {
   width: calc(95.83333% - 10px);
   margin: 5px; }
 
-@media screen and (min-width: 40em) {
+@media screen and (min-width: 600px) {
   .batch-c-md-1-1 {
     box-flex: 0;
     -webkit-flex: 0 0 auto;
@@ -542,7 +536,7 @@ html {
     width: calc(95.83333% - 10px);
     margin: 5px; } }
 
-@media screen and (min-width: 53.75em) {
+@media screen and (min-width: 900px) {
   .batch-c-lg-1-1 {
     box-flex: 0;
     -webkit-flex: 0 0 auto;

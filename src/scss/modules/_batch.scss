@@ -2,8 +2,8 @@
 // GPL-2.0 License
 
 // Breakpoints unless already defined when using Bitters.
-$medium-screen: em(640) !default;
-$large-screen: em(860) !default;
+$medium-screen: 600px !default;
+$large-screen: 900px !default;
 
 // Cell Gutter
 // Must be an even number
@@ -69,12 +69,12 @@ $cell-sizes : (
 @include small-batch();
 
 // Medium screen cells
-@include media($medium-screen) {
+@media screen and (min-width: $medium-screen) {
 	@include small-batch('-md');
 }
 
 // Large screen cells
-@include media($large-screen) {
+@media screen and (min-width: $large-screen) {
 	@include small-batch('-lg');
 }
 

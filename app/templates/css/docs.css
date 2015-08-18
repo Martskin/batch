@@ -524,7 +524,7 @@ html {
   white-space: nowrap;
   margin-right: 0.75em;
   text-align: center; }
-  @media screen and (min-width: 40em) {
+  @media screen and (min-width: 600px) {
     .btn, button {
       margin-right: 1.5em; } }
   .btn:hover, .btn:focus, button:hover, button:focus {
@@ -553,7 +553,7 @@ html {
   font-size: 0.7em;
   font-style: italic;
   display: block; }
-  @media screen and (min-width: 40em) {
+  @media screen and (min-width: 600px) {
     .btn_notes {
       display: inline; } }
 
@@ -574,7 +574,7 @@ html {
 .l-row {
   padding: 1.5em 0.75em;
   overflow: hidden; }
-  @media screen and (min-width: 40em) {
+  @media screen and (min-width: 600px) {
     .l-row {
       padding: 3em 0.75em; } }
 
@@ -613,7 +613,7 @@ html {
   .l-section:last-of-type {
     margin-bottom: 0; }
 
-@media screen and (min-width: 53.75em) {
+@media screen and (min-width: 900px) {
   .batch-logo {
     margin-bottom: 0; } }
 
@@ -622,7 +622,7 @@ html {
 
 .utilities {
   text-align: center; }
-  @media screen and (min-width: 53.75em) {
+  @media screen and (min-width: 900px) {
     .utilities {
       text-align: right; } }
 
@@ -632,7 +632,7 @@ html {
 .hero {
   padding-top: 2.25em;
   padding-bottom: 2.25em; }
-  @media screen and (min-width: 40em) {
+  @media screen and (min-width: 600px) {
     .hero {
       padding-top: 3em;
       padding-bottom: 3em; } }
@@ -645,10 +645,10 @@ html {
 .hero-warehouse {
   margin: 0 auto;
   line-height: 0; }
-  @media screen and (min-width: 40em) {
+  @media screen and (min-width: 600px) {
     .hero-warehouse {
       width: 90%; } }
-  @media screen and (min-width: 53.75em) {
+  @media screen and (min-width: 900px) {
     .hero-warehouse {
       width: 70%; } }
 
@@ -671,7 +671,7 @@ html {
 .feature-object_icon {
   color: #EC5B05;
   font-size: 4em; }
-  @media screen and (min-width: 53.75em) {
+  @media screen and (min-width: 900px) {
     .feature-object_icon {
       font-size: 7em; } }
 
@@ -732,14 +732,14 @@ code {
     color: #ffffff;
     text-align: center;
     background: #EC5B05; }
-    @media screen and (min-width: 40em) {
+    @media screen and (min-width: 600px) {
       .batch-g--templates header {
         height: 65px; } }
   .batch-g--templates aside {
     color: #ffffff;
     text-align: center;
     background: #BF3100; }
-    @media screen and (min-width: 40em) {
+    @media screen and (min-width: 600px) {
       .batch-g--templates aside {
         height: 200px; } }
     .batch-g--templates aside:nth-of-type(2) {
@@ -748,14 +748,14 @@ code {
     color: #ffffff;
     text-align: center;
     background: #8EA604; }
-    @media screen and (min-width: 40em) {
+    @media screen and (min-width: 600px) {
       .batch-g--templates main {
         height: 200px; } }
   .batch-g--templates footer {
     color: #ffffff;
     text-align: center;
     background: #333; }
-    @media screen and (min-width: 40em) {
+    @media screen and (min-width: 600px) {
       .batch-g--templates footer {
         height: 65px; } }
 
@@ -773,7 +773,7 @@ code {
 
 .highlight-sm .strong {
   font-weight: bold; }
-@media screen and (min-width: 40em) {
+@media screen and (min-width: 600px) {
   .highlight-sm {
     opacity: 0.4; }
     .highlight-sm .strong {
@@ -783,12 +783,12 @@ code {
   opacity: 0.4; }
   .highlight-md .strong {
     font-weight: normal; }
-  @media screen and (min-width: 40em) {
+  @media screen and (min-width: 600px) {
     .highlight-md {
       opacity: 1; }
       .highlight-md .strong {
         font-weight: bold; } }
-  @media screen and (min-width: 53.75em) {
+  @media screen and (min-width: 900px) {
     .highlight-md {
       opacity: 0.4; }
       .highlight-md .strong {
@@ -798,39 +798,39 @@ code {
   opacity: 0.4; }
   .highlight-lg .strong {
     font-weight: normal; }
-  @media screen and (min-width: 53.75em) {
+  @media screen and (min-width: 900px) {
     .highlight-lg {
       opacity: 1; }
       .highlight-lg .strong {
         font-weight: bold; } }
 
-@media screen and (min-width: 40em) {
+@media screen and (min-width: 600px) {
   .show-sm {
     display: none; } }
 
-@media screen and (max-width: 40em)  {
+@media screen and (max-width: 600px)  {
   .hide-sm {
     display: none; } }
 
-@media screen and (max-width: 40em)  {
+@media screen and (max-width: 600px)  {
   .show-md {
     display: none; } }
-@media screen and (min-width: 53.75em) {
+@media screen and (min-width: 900px) {
   .show-md {
     display: none; } }
 
-@media screen and (min-width: 40em) and (max-width: 53.75em)  {
+@media screen and (min-width: 600px) and (max-width: 900px)  {
   .hide-md {
     display: none; } }
 
-@media screen and (max-width: 40em)  {
+@media screen and (max-width: 600px)  {
   .show-lg {
     display: none; } }
-@media screen and (min-width: 40em) and (max-width: 53.75em)  {
+@media screen and (min-width: 600px) and (max-width: 900px)  {
   .show-lg {
     display: none; } }
 
-@media screen and (min-width: 53.75em) {
+@media screen and (min-width: 900px) {
   .hide-lg {
     display: none; } }
 
