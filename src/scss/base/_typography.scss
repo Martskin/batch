@@ -71,3 +71,7 @@ picture {
   margin: 0;
   max-width: 100%;
 }
+
+::selection {
+  background:$barrel-green-light;
+}

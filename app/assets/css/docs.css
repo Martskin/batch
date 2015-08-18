@@ -491,6 +491,12 @@ img, picture {
   margin: 0;
   max-width: 100%; }
 
+::-moz-selection {
+  background: #f1fdac; }
+
+::selection {
+  background: #f1fdac; }
+
 html {
   box-sizing: border-box; }
 

@@ -35,7 +35,7 @@ $cell-sizes : (
 
 // We'll loop through the $cell-sizes map to distill the cell classes.
 // The key is the numerator and then we loop through the value array for each denominator.
-// The key-value pair is used in the class the name and is also used to calculate the width percentage.
+// The key-value pair is used in the class name and is also used to calculate the width percentage.
 // Default sizes are 3rds, 4ths, 6ths, 8ths, 12ths and 24ths:
 // 1-1, 1-2, 1-3, 1-4, 1-6, 1-8, 1-12, 1-24
 // 2-3
@@ -54,9 +54,7 @@ $cell-sizes : (
 			.batch-c#{$breakpoint}-#{$key}-#{nth($cell-size, $i)} {
 				@include flex(0 0 auto);
 				width:$cell-size-percentage;
-			}
-			.batch-g--gutter {
-				> .batch-c#{$breakpoint}-#{$key}-#{nth($cell-size, $i)} {
+				.batch-g--gutter > & {
 					width:calc(#{$cell-size-percentage} - #{$batch-gutter});
 					margin: ($batch-gutter/2);
 				}
@@ -65,20 +63,7 @@ $cell-sizes : (
 	}
 }
 
-// Base cells
-@include small-batch();
-
-// Medium screen cells
-@media screen and (min-width: $medium-screen) {
-	@include small-batch('-md');
-}
-
-// Large screen cells
-@media screen and (min-width: $large-screen) {
-	@include small-batch('-lg');
-}
-
-// Batch grid wrapper
+/* Batch grid wrapper */
 .batch-g {
 	@include align-items(stretch);
 	@include display(flex);
@@ -87,6 +72,7 @@ $cell-sizes : (
 	@include flex-wrap(wrap);
 }
 
+/* Batch grid modifiers */
 .batch-g--border {
 	> [class^="batch-c"] {
 		border:$batch-border solid $batch-border-color;
@@ -127,5 +113,16 @@ $cell-sizes : (
 	@include justify-content(flex-end);
 }
 
+/* Base cells */
+@include small-batch();
 
+/* Medium screen cells */
+@media screen and (min-width: $medium-screen) {
+	@include small-batch('-md');
+}
+
+/* Large screen cells */
+@media screen and (min-width: $large-screen) {
+	@include small-batch('-lg');
+}
 
