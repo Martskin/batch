@@ -12,8 +12,11 @@ $batch-gutter:	10px;
 // Cell Padding
 $batch-padding:	5px;
 
-// Cell Padding
-$batch-border:	#666666;
+// Cell Border
+$batch-border:	1px;
+
+// Cell Border Color
+$batch-border-color:	#666666;
 
 
 // Batch cells
@@ -71,15 +74,16 @@ $cell-sizes : (
 .batch-g {
 	@include align-items(stretch);
 	@include display(flex);
-	@include flex-flow(row wrap);
 	@include justify-content(flex-start);
+	@include flex-direction(row);
+	@include flex-wrap(wrap);
 }
 
 .batch-g--border {
 	> [class^="batch-c"] {
 		position: relative;
 		&:before {
-			border:1px solid $batch-border;
+			border:$batch-border solid $batch-border-color;
 			content:'';
 			display: block;
 			@include position(absolute, 0);
