@@ -9,8 +9,9 @@ var gulp = require('gulp'),
     minifyCSS = require('gulp-minify-css'),
     neat = require('node-neat').includePaths,
     package = require('./package.json'),
-    dist_dir = 'app/assets/css';
-    temp_dir = 'app/templates/css';
+    dist_dir = 'app/assets/css',
+    temp_dir = 'app/templates/css',
+    $ = require('gulp-load-plugins')();
 
 var banner = [
   '/*!\n' +
@@ -24,12 +25,32 @@ var banner = [
   '\n'
 ].join('');
 
+/**
+ * Error notification settings
+ */
+function errorAlert(err) {
+  $.notify.onError({
+    message:  '<%= error.message %>',
+    sound:    'Sosumi'
+  })(err);
+  console.log(err.toString());
+}
+
 gulp.task('css', function () {
-    return gulp.src('src/scss/*.scss')
-    .pipe(sass({
-      errLogToConsole: true,
+    gulp.src('src/scss/*.scss')
+    .pipe( $.plumber({ errorHandler: errorAlert }) )
+    .pipe($.sass({
       includePaths: ['styles'].concat(neat)
     }))
+    .on( 'error', function(err) {
+      new $.util.PluginError(
+        'CSS',
+        err,
+        {
+          showStack: true
+        }
+      );
+    })
     .pipe(autoprefixer('last 4 version'))
     .pipe(header(banner, { package : package }))
     .pipe(gulp.dest(dist_dir))
@@ -38,11 +59,19 @@ gulp.task('css', function () {
     .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest(dist_dir))
     .pipe(gulp.dest(temp_dir))
-    .pipe(browserSync.reload({stream:true}));
+    .pipe(browserSync.reload({stream:true,notify: true}))
+    .on( 'error', errorAlert )
+    .pipe(
+      $.notify({
+        message:  'Styles have been compiled and minified into assets/css and templates/css directories.',
+        onLast:   true
+      })
+    );
 });
 
 gulp.task('js',function(){
   gulp.src('src/js/scripts.js')
+    .pipe( $.plumber({ errorHandler: errorAlert }) )
     .pipe(jshint('.jshintrc'))
     .pipe(jshint.reporter('default'))
     .pipe(header(banner, { package : package }))
@@ -51,7 +80,14 @@ gulp.task('js',function(){
     .pipe(header(banner, { package : package }))
     .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest('app/assets/js'))
-    .pipe(browserSync.reload({stream:true, once: true}));
+    .pipe(browserSync.reload({stream:true, once: true}))
+    .on( 'error', errorAlert )
+    .pipe(
+      $.notify({
+        message:  'Scripts have been compiled and minified into assets/js directory.',
+        onLast:   true
+      })
+    );
 });
 
 gulp.task('browser-sync', function() {
@@ -61,6 +97,7 @@ gulp.task('browser-sync', function() {
         }
     });
 });
+
 gulp.task('bs-reload', function () {
     browserSync.reload();
 });
