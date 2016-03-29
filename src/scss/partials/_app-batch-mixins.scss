@@ -1,0 +1,13 @@
+// Example App using batch-mixins
+
+body{
+	overflow-x:hidden;
+}
+
+.content {
+	@include grid($gutter: true);
+	.column {
+		@include stackable-column($width: 3/18, $gutter: true, $border: false);
+	}
+
+}

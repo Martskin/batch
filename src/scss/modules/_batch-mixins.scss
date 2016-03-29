@@ -1,0 +1,77 @@
+// Batch 1.0.0 mixins
+// GPL-2.0 License
+
+// Breakpoints unless already defined when using Bitters.
+$medium-screen: 900px !default;
+$large-screen: 1200px !default;
+$small-screen: 500px !default;
+
+// Cell Gutter
+// Must be an even number
+$batch-gutter:	10px;
+
+// Cell Padding
+$batch-padding:	5px;
+
+// Cell Border
+$batch-border:	1px;
+
+// Cell Border Color
+$batch-border-color:	#666666;
+
+
+@mixin grid-border{
+	@include grid;
+	border:$batch-border solid $batch-border-color;
+}
+
+@mixin gutter-margin{
+	margin:0 (-$batch-gutter/2);
+}
+
+@mixin border {
+		border:$batch-border solid $batch-border-color;
+	}
+
+@mixin padding {
+		padding:$batch-padding;
+	}
+
+@mixin grid($align: strech, $justify: flex-start, $direction: row, $gutter: false) {
+	@include display(flex);
+	@include flex-wrap(wrap);
+	@include align-items($align);
+	@include justify-content($justify);
+	@include flex-direction($direction);
+
+	@if $gutter == true {
+		@include gutter-margin;
+	}
+}
+
+@mixin column($width:1, $gutter: false, $border: false){
+	@include flex(0 0 auto);
+	@include padding;
+	box-sizing: border-box;
+	@if $gutter{
+		margin: ($batch-gutter/2);
+		width: calc(#{$width} * 100% - #{$batch-gutter});
+		}@else{
+			width: calc(#{$width} * 100%);
+		}
+	@if $border{
+		@include border;
+	}
+}
+
+@mixin stackable-column($width: 1, $gutter: false, $border: false){
+	@media screen and (min-width: $large-screen) {
+			@include column($width, $gutter, $border);
+	}
+	@media screen and (min-width: $medium-screen) and
+	(max-width: $large-screen){
+		@include column($width * 2, $gutter, $border);
+	}
+		@include column($gutter: $gutter, $border: $border);
+}
+
