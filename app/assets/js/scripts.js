@@ -3,8 +3,8 @@
  * A simple, responsive, flexbox grid system.
  * https://github.com/Martskin/batch
  * @author Martin Hofmann
- * @version 1.0.0
- * Copyright 2015. GPL-2.0 licensed.
+ * @version 2.0.0
+ * Copyright 2016. GPL-2.0 licensed.
  */
 (function ($, window, document, undefined) {
 

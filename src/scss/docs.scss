@@ -5,15 +5,13 @@
 //----------------------------------*/
 
 // Reset 
-@import 'modules/_normalize.scss';
+@import 'normalize';
 
 //----------------------------------*\
 // Bourbon
 //----------------------------------*/
 
-@import "bourbon";
 @import "base/base";
-@import "neat";
 
 //----------------------------------*\
 // Partials

@@ -2,33 +2,34 @@
 
 .btn,
 button {
-  @include appearance(none);
   -webkit-font-smoothing: antialiased;
+  appearance: none;
   background-color: $action-color;
   border-radius: $base-border-radius;
   border: none;
-  color: #fff;
+  color: $white;
   cursor: pointer;
   display: inline-block;
   font-family: $base-font-family;
   font-size: $base-font-size;
   font-weight: 400;
   line-height: 1;
+  margin-right: $small-spacing;
   padding: 0.75em 1em;
+  text-align:center;
   text-decoration: none;
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
-  margin-right: $small-spacing;
-  text-align:center;
-  @include media($medium-screen) {
+
+  @media screen and (min-width: $medium-screen) {
     margin-right: $base-spacing;
   }
 
   &:hover,
   &:focus {
     background-color: darken($action-color, 15%);
-    color: #fff;
+    color: $white;
   }
 
   &:disabled {
@@ -41,36 +42,40 @@ button {
   }
 
   &.btn--secondary {
-    color:$action-color;
+    background-color: $white;
     border:1px solid $action-color;
-    background-color:$white;
+    color: $action-color;
+
     &:hover,
     &:focus {
-      background-color:$lighter-gray;
+      background-color: $lighter-gray;
     }
   }
 }
 
 .btn--small {
   font-size: $small-font-size;  
-  padding:0.75em 0.9em;
   margin-right: $small-spacing;
+  padding: 0.75em 0.9em;
+
   & + &:last-of-type {
     margin-right: 0;
   }
 }
 
 .btn_notes {
+  display: block;
   font-size: 0.7em;
   font-style: italic;
-  display: block;
-  @include media($medium-screen) {
+
+  @media screen and (min-width: $medium-screen) {
     display: inline;
   }
 }
 
 .link--light {
   color:$white;
+
   &:hover,
   &:focus {
     color: $barrel-gold;
@@ -78,15 +83,15 @@ button {
 }
 
 .link--underlined {
-  border-bottom-width: 2px;
+  border-bottom-color: $action-color;
   border-bottom-style: solid;
-  border-bottom-color:$action-color;
+  border-bottom-width: 2px;
+
   &.link--light {
-    border-bottom-color:transparentize($white, 0.75);
+    border-bottom-color: transparentize($white, 0.75);
+
     &:hover {
-      border-bottom-color:transparentize($barrel-gold, 0.75);
+      border-bottom-color: transparentize($barrel-gold, 0.75);
     }
   }
 }
-
-

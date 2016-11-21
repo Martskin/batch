@@ -1,7 +1,7 @@
-// Batch 1.0.0
+// Batch 2.0.0
 // GPL-2.0 License
 
-// Breakpoints unless already defined when using Bitters.
+// Breakpoints
 $medium-screen: 600px !default;
 $large-screen: 900px !default;
 
@@ -18,6 +18,8 @@ $batch-border:	1px;
 // Cell Border Color
 $batch-border-color:	#666666;
 
+// Cell Order Positions
+$batch-order-positions: 9;
 
 // Batch cells
 $cell-sizes : (
@@ -48,32 +50,44 @@ $cell-sizes : (
 // 19-24
 // 23-24
 @mixin small-batch($breakpoint:'') {
-	@each $key, $cell-size in $cell-sizes {
-		@for $i from 1 to (length($cell-size)+1) {
-			$cell-size-percentage: (percentage($key/nth($cell-size, $i)));
-			.batch-c#{$breakpoint}-#{$key}-#{nth($cell-size, $i)} {
-				@include flex(0 0 auto);
-				width:$cell-size-percentage;
-				.batch-g--gutter > & {
-					width:calc(#{$cell-size-percentage} - #{$batch-gutter});
-					margin: ($batch-gutter/2);
-				}
-			}
-		}
-	}
+  @each $key, $cell-size in $cell-sizes {
+    @for $i from 1 to (length($cell-size)+1) {
+      $cell-size-percentage: (percentage($key/nth($cell-size, $i)));
+      .batch-c#{$breakpoint}-#{$key}-#{nth($cell-size, $i)} {
+        box-sizing: border-box;
+        flex: 0 0 auto;
+        width: $cell-size-percentage;
+
+        .batch-g--gutter > & {
+          margin: ($batch-gutter/2);
+          width: calc(#{$cell-size-percentage} - #{$batch-gutter});
+        }
+      }
+    }
+  }
+}
+
+// Flexbox cell ordering modifier classes
+@mixin cell-order($breakpoint:'') {
+  @for $i from 1 to ($batch-order-positions+1) {
+    .batch-c--order#{$breakpoint}-#{$i} {
+      order: $i;
+    }
+  }
 }
 
 /* Batch grid wrapper */
 .batch-g {
-	@include align-items(stretch);
-	@include display(flex);
-	@include justify-content(flex-start);
-	@include flex-direction(row);
-	@include flex-wrap(wrap);
+  align-items: stretch;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
 /* Batch grid modifiers */
 .batch-g--border {
+
 	> [class^="batch-c"] {
 		border:$batch-border solid $batch-border-color;
 	}
@@ -84,33 +98,50 @@ $cell-sizes : (
 }
 
 .batch-g--padding {
+
 	> [class^="batch-c"] {
 		padding:$batch-padding;
 	}
 }
 
+.batch-g--padding-horizontal {
+
+  > [class^="batch-c"] {
+    padding-left: $batch-padding;
+    padding-right: $batch-padding;
+  }
+}
+
+.batch-g--padding-vertical {
+
+  > [class^="batch-c"] {
+    padding-bottom: $batch-padding;
+    padding-top: $batch-padding;
+  }
+}
+
 .batch-g--reverse {
-	@include flex-direction(row-reverse);
+  flex-direction: row-reverse;
 }
 
 .batch-g--valign-top {
-	@include align-items(flex-start);
+  align-items: flex-start;
 }
 
 .batch-g--valign-center {
-	@include align-items(center);
+  align-items: center;
 }
 
 .batch-g--valign-bottom {
-	@include align-items(flex-end);
+  align-items: flex-end;
 }
 
 .batch-g--align-center {
-	@include justify-content(center);
+  justify-content: center;
 }
 
 .batch-g--align-right {
-	@include justify-content(flex-end);
+  justify-content: flex-end;
 }
 
 /* Base cells */
@@ -126,3 +157,25 @@ $cell-sizes : (
 	@include small-batch('-lg');
 }
 
+/* Medium screen cell ordering */
+@media screen and (min-width: $medium-screen) {
+  @include cell-order('-md');
+}
+
+/* Large screen cell ordering */
+@media screen and (min-width: $large-screen) {
+  @include cell-order('-lg');
+}
+
+/* Batch cell modifiers */
+.batch-c--valign-self-top {
+  align-self: flex-start;
+}
+
+.batch-c--valign-self-bottom {
+  align-self: flex-end;
+}
+
+.batch-c--valign-self-center {
+  align-self: center;
+}
