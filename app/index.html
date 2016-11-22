@@ -16,14 +16,12 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
-    <link href='http://fonts.googleapis.com/css?family=Raleway:500' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:500' rel='stylesheet' type='text/css'>
     <link href="assets/css/batch.min.css" rel="stylesheet">
     <link href="assets/css/docs.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="icon" type="image/png" href="favicon.png">
-
-    <script src="assets/components/modernizr/modernizr.js"></script>
   </head>
   <body>
 
@@ -157,7 +155,7 @@
                   <h3>Percentage Based Grid</h3>
                 </li>
                 <li class="feature-object_description">
-                  <p>Batch takes advantage of the flexbox layout mode. Providing <a class="link--light link--underlined" href="#vertically-align-top" data-behavior="smooth-scroll">vertical alignment</a>, <a class="link--light link--underlined" href="#cell-ordering" data-behavior="smooth-scroll">cell ordering</a> and <a class="link--light link--underlined" href="#basic-usage" data-behavior="smooth-scroll">equal cell height</a>!</p>
+                  <p>Batch takes advantage of the flexbox layout mode. Providing <a class="link--light link--underlined" href="#cell-ordering" data-behavior="smooth-scroll">cell ordering</a>, <a class="link--light link--underlined" href="#vertically-align-top" data-behavior="smooth-scroll">vertical alignment</a> and <a class="link--light link--underlined" href="#basic-usage" data-behavior="smooth-scroll">equal cell heights</a>!</p>
                 </li>
               </ul>
             </div>
@@ -301,7 +299,7 @@
         
            <section id="responsive-usage" class="l-section">
             <h3><i class="fa fa-arrows-h"></i> Responsive Usage</h3>
-            <p>This example demonstrates how to set the width of a cell at <span class="strong">mobile</span> ( <code><span class="code-n">batch-c-</span></code> ), <span class="strong">tablet</span> ( <code><span class="code-n">batch-c-md-</span></code> ) and <span class="strong">desktop</span> ( <code><span class="code-n">batch-c-lg-</span></code> ) screen sizes.</p>
+            <p>This example demonstrates how to set the width of a cell at <span class="strong">mobile</span> ( <code><span class="code-n">batch-c-x-x</span></code> ), <span class="strong">tablet</span> ( <code><span class="code-n">batch-c-md-x-x</span></code> ) and <span class="strong">desktop</span> ( <code><span class="code-n">batch-c-lg-x-x</span></code> ) screen sizes.</p>
             <div class="batch-g batch-g--gutter batch-g--padding batch-g--docs">
               <div class="batch-c-1-1 batch-c-md-1-2 batch-c-lg-1-4">
                 <pre>
@@ -665,6 +663,9 @@
           <section id="cell-ordering" class="l-section">
             <h4>Cell Ordering</h4>
             <p>Add a <code><span class="code-n">batch-c--order-xx-x</span></code> class to a <code><span class="code-n">batch-c-x-x</span></code> element to change the order of the cells. All sibling cells must also have a cell ordering modifier or the default index of <code><span class="code-n">0</span></code> will be used. Resulting in that cell being in the first position. Adjust the total number of positions by changing the <code><span class="code-o">$batch-order-positions</span></code> Sass variable in the <a href="#link" data-behavior="trigger-click" data-target="scss-zip">SCSS source file</a>. The default is 10 positions.</p>
+
+            <p>This example demonstrates how to order cells at <span class="strong">tablet</span> ( <code><span class="code-n">batch-c--order-md-x</span></code> ) and <span class="strong">desktop</span> ( <code><span class="code-n">batch-c--order-lg-x</span></code> ) screen sizes. Using a mobile first design approach, the mobile screen size uses the HTML source order.</p>
+
             <p class="comment">&lt;!-- Example Markup Code --&gt;</p>
   <pre class="pre-block">
   <code>
@@ -686,23 +687,23 @@
              <div class="batch-c-1-3 batch-c--order-md-2 batch-c--order-lg-3">
               <div>Grid Cell 1</div>
               <br />
-              <p class="small-text highlight highlight-sm">This cell <span class="show-sm"></span>will be ordered in the <span class="strong">1st</span> position on <span class="strong">mobile</span> size screens.</p>
-              <p class="small-text highlight highlight-md">This cell <span class="show-sm"></span>will be ordered in the <span class="strong">2nd</span> position on <span class="strong">tablet</span> size screens.</p>
-              <p class="small-text highlight highlight-lg">This cell <span class="show-sm"></span>will be ordered in the <span class="strong">3rd</span> position on <span class="strong">desktop</span> size screens.</p>
+              <p class="small-text highlight highlight-sm">This cell <span class="show-sm">is</span><span class="hide-sm">will be</span> ordered in the <span class="strong">1st</span> position on <span class="strong">mobile</span> size screens.</p>
+              <p class="small-text highlight highlight-md">This cell <span class="show-md">is</span><span class="hide-md">will be</span> ordered in the <span class="strong">2nd</span> position on <span class="strong">tablet</span> size screens.</p>
+              <p class="small-text highlight highlight-lg">This cell <span class="show-lg">is</span><span class="hide-lg">will be</span> ordered in the <span class="strong">3rd</span> position on <span class="strong">desktop</span> size screens.</p>
              </div>
              <div class="batch-c-1-3 batch-c--order-md-1">
               <div>Grid Cell 2</div>
               <br />
-              <p class="small-text highlight highlight-sm">This cell <span class="show-sm"></span>will be ordered in the <span class="strong">2nd</span> position on <span class="strong">mobile</span> size screens.</p>
-              <p class="small-text highlight highlight-md">This cell <span class="show-sm"></span>will be ordered in the <span class="strong">1st</span> position on <span class="strong">tablet</span> size screens.</p>
-              <p class="small-text highlight highlight-lg">This cell <span class="show-sm"></span>will be ordered in the <span class="strong">1st</span> position on <span class="strong">desktop</span> size screens.</p>
+              <p class="small-text highlight highlight-sm">This cell <span class="show-sm">is</span><span class="hide-sm">will be</span> ordered in the <span class="strong">2nd</span> position on <span class="strong">mobile</span> size screens.</p>
+              <p class="small-text highlight highlight-md">This cell <span class="show-md">is</span><span class="hide-md">will be</span> ordered in the <span class="strong">1st</span> position on <span class="strong">tablet</span> size screens.</p>
+              <p class="small-text highlight highlight-lg">This cell <span class="show-lg">is</span><span class="hide-lg">will be</span> ordered in the <span class="strong">1st</span> position on <span class="strong">desktop</span> size screens.</p>
              </div>
              <div class="batch-c-1-3 batch-c--order-md-3 batch-c--order-lg-2">
               <div>Grid Cell 3</div>
               <br />
-              <p class="small-text highlight highlight-sm">This cell <span class="show-sm"></span>will be ordered in the <span class="strong">3rd</span> position on <span class="strong">mobile</span> size screens.</p>
-              <p class="small-text highlight highlight-md">This cell <span class="show-sm"></span>will be ordered in the <span class="strong">3rd</span> position on <span class="strong">tablet</span> size screens.</p>
-              <p class="small-text highlight highlight-lg">This cell <span class="show-sm"></span>will be ordered in the <span class="strong">2nd</span> position on <span class="strong">desktop</span> size screens.</p>
+              <p class="small-text highlight highlight-sm">This cell <span class="show-sm">is</span><span class="hide-sm">will be</span> ordered in the <span class="strong">3rd</span> position on <span class="strong">mobile</span> size screens.</p>
+              <p class="small-text highlight highlight-md">This cell <span class="show-md">is</span><span class="hide-md">will be</span> ordered in the <span class="strong">3rd</span> position on <span class="strong">tablet</span> size screens.</p>
+              <p class="small-text highlight highlight-lg">This cell <span class="show-lg">is</span><span class="hide-lg">will be</span> ordered in the <span class="strong">2nd</span> position on <span class="strong">desktop</span> size screens.</p>
              </div>
             </div>
           </section>
@@ -807,7 +808,7 @@
           </section>
 
           <section id="cell-padding-horizontal" class="l-section">
-            <h4>Cell Padding Horizontal Only</h4>
+            <h4>Cell Padding Horizontal (Right and Left) Only</h4>
             <p>Add the <code><span class="code-n">batch-g--padding-horizontal</span></code> class to the <code><span class="code-n">batch-g</span></code> grid wrapper element to add horizontal padding only inside the cells. Adjust the padding size by changing the <code><span class="code-o">$batch-padding</span></code> Sass variable in the <a href="#link" data-behavior="trigger-click" data-target="scss-zip">SCSS source file</a>.</p>
             <p class="comment">&lt;!-- Example Markup Code --&gt;</p>
 <pre class="pre-block">
@@ -840,7 +841,7 @@
           </section>
 
           <section id="cell-padding-horizontal" class="l-section">
-            <h4>Cell Padding Vertical Only</h4>
+            <h4>Cell Padding Vertical (Top and Bottom) Only</h4>
             <p>Add the <code><span class="code-n">batch-g--padding-vertical</span></code> class to the <code><span class="code-n">batch-g</span></code> grid wrapper element to add vertical padding only inside the cells. Adjust the padding size by changing the <code><span class="code-o">$batch-padding</span></code> Sass variable in the <a href="#link" data-behavior="trigger-click" data-target="scss-zip">SCSS source file</a>.</p>
             <p class="comment">&lt;!-- Example Markup Code --&gt;</p>
 <pre class="pre-block">
@@ -1273,7 +1274,7 @@
       </div>
     </footer>
 
-    <script src="assets/components/jquery/jquery.min.js"></script>
+    <script src="assets/js/jquery/jquery.min.js"></script>
     <script src="assets/js/scripts.min.js"></script>
 
     <script>

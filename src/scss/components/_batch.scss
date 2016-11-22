@@ -1,5 +1,9 @@
-// Batch 2.0.0
-// GPL-2.0 License
+// Batch
+// A simple, responsive, flexbox grid system.
+// https://github.com/Martskin/batch
+// @author Martin Hofmann
+// @version 2.0.0
+// Copyright 2016. GPL-2.0 licensed.
 
 // Breakpoints
 $medium-screen: 600px !default;
@@ -54,8 +58,6 @@ $cell-sizes : (
     @for $i from 1 to (length($cell-size)+1) {
       $cell-size-percentage: (percentage($key/nth($cell-size, $i)));
       .batch-c#{$breakpoint}-#{$key}-#{nth($cell-size, $i)} {
-        box-sizing: border-box;
-        flex: 0 0 auto;
         width: $cell-size-percentage;
 
         .batch-g--gutter > & {
@@ -142,6 +144,12 @@ $cell-sizes : (
 
 .batch-g--align-right {
   justify-content: flex-end;
+}
+
+/* Batch grid cells */
+[class^="batch-c"] {
+  box-sizing: border-box;
+  flex: 0 0 auto;
 }
 
 /* Base cells */
