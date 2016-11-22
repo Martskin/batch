@@ -5,7 +5,7 @@
 #Batch
 A simple, responsive, flexbox grid system.
 
-*Version 1.0.0*
+*Version 2.0.0*
 
 ###Basic Usage
 ```html
@@ -24,14 +24,6 @@ A simple, responsive, flexbox grid system.
 
 ![basic-usage](https://cloud.githubusercontent.com/assets/3717760/9275606/3f007484-426c-11e5-9b05-94671aaaf562.png)
 
-##Requires Bourbon
-
-Import Batch after [Bourbon](http://bourbon.io/) in your main manifest file
-
-```scss
-	@import "bourbon";
-    @import "_batch.scss";
-```
 
 ##Documentation
 [Batch Documentation](https://martskin.github.io/batch)
@@ -41,6 +33,8 @@ Import Batch after [Bourbon](http://bourbon.io/) in your main manifest file
 ``npm install``
 
 ``gulp``
+
+Visit `http://localhost:3000/` to view docs locally.
 
 ## Credits
 * Framework built with [FastShell](https://github.com/HosseinKarami/fastshell)

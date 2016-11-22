@@ -7,7 +7,7 @@ var gulp = require('gulp'),
     header  = require('gulp-header'),
     rename = require('gulp-rename'),
     minifyCSS = require('gulp-minify-css'),
-    neat = require('node-neat').includePaths,
+    normalize = require('node-normalize-scss').includePaths,
     package = require('./package.json'),
     dist_dir = 'app/assets/css',
     temp_dir = 'app/templates/css',
@@ -40,7 +40,7 @@ gulp.task('css', function () {
     gulp.src('src/scss/*.scss')
     .pipe( $.plumber({ errorHandler: errorAlert }) )
     .pipe($.sass({
-      includePaths: ['styles'].concat(neat)
+      includePaths: ['styles'].concat(normalize)
     }))
     .on( 'error', function(err) {
       new $.util.PluginError(

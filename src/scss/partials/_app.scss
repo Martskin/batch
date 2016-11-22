@@ -1,7 +1,8 @@
 // App
 
 .batch-logo {
-	@include media($large-screen) {
+
+	@media screen and (min-width: $large-screen) {
 		margin-bottom:0;
 	}
 }
@@ -12,7 +13,8 @@
 
 .utilities {
 	text-align:center;
-	@include media($large-screen) {
+
+	@media screen and (min-width: $large-screen) {
 		text-align:right;
 	}
 }
@@ -22,35 +24,39 @@
 }
 
 .hero {
-	padding-top:$medium-spacing;
-	padding-bottom:$medium-spacing;
-	@include media($medium-screen) {
-		padding-top:$large-spacing;
-		padding-bottom:$large-spacing;
+  padding-bottom:$medium-spacing;
+  padding-top:$medium-spacing;
+
+	@media screen and (min-width: $medium-screen) {
+    padding-bottom:$large-spacing;
+    padding-top:$large-spacing;
 	}
 }
 
 .hero-headline {
-	text-align:center;
-	font-size:2.5em;
-	text-shadow:0px 2px 0px rgba($dark-gray, 0.2);
+  font-size:2.5em;
+  text-align:center;
+  text-shadow:0px 2px 0px rgba($dark-gray, 0.2);
 }
 
 .hero-warehouse {
     margin: 0 auto;
     line-height: 0;
-    @include media($medium-screen) {
+
+    @media screen and (min-width: $medium-screen) {
     	width: 90%;
     }
-    @include media($large-screen) {
+
+    @media screen and (min-width: $large-screen) {
     	width: 70%;
     }
 }
 
 .bi-barrel {
-	transition: top 0.2s linear;
-	position: relative;
-	top: -1000px;
+  position: relative;
+  top: -1000px;
+  transition: top 0.2s linear;
+
 	&.is-dropped {
 		top: 0px;
 	}
@@ -61,32 +67,34 @@
 }
 
 .feature-object {
-	text-align:center;
-	padding:0 $base-spacing;
+  padding:0 $base-spacing;
+  text-align:center;
 }
 
 .feature-object_icon {
 	color:$barrel-gold;
 	font-size:4em;
-	@include media($large-screen) {
+
+	@media screen and (min-width: $large-screen) {
 		font-size:7em;
 	}
 }
 
 .comment {
+  font-family: $code-font-family;
 	opacity: 0.5;
-	font-family: $code-font-family;
 }
 
 pre {
-	font-size:$small-font-size;
-	line-height:1.25em;
-	font-family: $code-font-family;
-	color:$dark-gray;
-	white-space: pre-line;
-	background:$lighter-gray;
-	border-radius:4px;
-	padding:5px;
+  background:$lighter-gray;
+  border-radius:4px;
+  color:$dark-gray;
+  font-family: $code-font-family;
+  font-size:$small-font-size;
+  line-height:1.25em;
+  overflow: auto;
+  padding:5px;
+  white-space: pre-line;
 }
 
 .pre-block {
@@ -94,15 +102,18 @@ pre {
 }
 
 code {
-	font-size:$small-font-size;
-	line-height:1.25em;
-	font-family: $code-font-family; 
+  font-family: $code-font-family;
+  font-size:$small-font-size;
+  line-height:1.25em;
+
 	.code-o {
 		color:$code-object-color;
 	}
+
 	.code-c {
 		color:$code-class-color;
 	}
+
 	.code-n {
 		color:$code-name-color;
 	}
@@ -111,6 +122,7 @@ code {
 .batch-g--docs {
 	background:$barrel-gold-light;
 	margin:0 -5px;
+
 	[class^="batch-c"] {
 		background:#ffffff;
 	}
@@ -118,6 +130,7 @@ code {
 
 .batch-g--border-lg {
 	background:$barrel-gold;
+
 	[class^="batch-c"] {
 		border-color:$barrel-gold;
 	}
@@ -125,6 +138,7 @@ code {
 
 .batch-g--filled {
 	background:$lighter-gray;
+
 	[class^="batch-c"] {
 		background:$light-gray;
 		font-size:$small-font-size;
@@ -132,8 +146,9 @@ code {
 }
 
 .batch-g--dl {
-	margin:0 0 $medium-spacing;
-	font-size:$small-font-size;
+  font-size:$small-font-size;
+  margin:0 0 $medium-spacing;
+
 	> [class^="batch-c"] {
 		&:nth-child(odd) {
 			text-align: right;
@@ -142,28 +157,34 @@ code {
 }
 
 @mixin template-shared($bkg, $hgt) {
-	color:$white;
-	text-align:center;
 	background:$bkg;
-	@include media($medium-screen) {
+  color:$white;
+	text-align:center;
+	
+	@media screen and (min-width: $medium-screen) {
 		height:$hgt;
 	}
 }
 
 .batch-g--templates {
 	margin-bottom:$small-spacing;
+
 	header {
 		@include template-shared($barrel-gold, 65px);
 	}
+
 	aside {
 		@include template-shared($barrel-amber, 200px);
+    
 		&:nth-of-type(2) {
 			opacity: 0.7;
 		}
 	}
+
 	main {
 		@include template-shared($barrel-green, 200px);
 	}
+
 	footer {
 		@include template-shared($dark-gray, 65px);
 	}
@@ -186,11 +207,14 @@ code {
 }
 
 .highlight-sm {
+
 	.strong {
 		font-weight: bold;
 	}
-	@include media($medium-screen) {
+
+	@media screen and (min-width: $medium-screen) {
 		opacity: 0.4;
+
 		.strong {
 			font-weight: normal;
 		}
@@ -199,17 +223,22 @@ code {
 
 .highlight-md {
 	opacity: 0.4;
+
 	.strong {
 		font-weight: normal;
 	}
-	@include media($medium-screen) {
+
+	@media screen and (min-width: $medium-screen) {
 		opacity: 1;
+
 		.strong {
 			font-weight: bold;
 		}
 	}
-	@include media($large-screen) {
+
+	@media screen and (min-width: $large-screen) {
 		opacity: 0.4;
+
 		.strong {
 			font-weight: normal;
 		}
@@ -218,11 +247,14 @@ code {
 
 .highlight-lg {
 	opacity: 0.4;
+
 	.strong {
 		font-weight: normal;
 	}
-	@include media($large-screen) {
+
+	@media screen and (min-width: $large-screen) {
 		opacity: 1;
+
 		.strong {
 			font-weight: bold;
 		}
@@ -230,49 +262,51 @@ code {
 }
 
 .show-sm {
-	@include media($medium-screen) {
+	@media screen and (min-width: $medium-screen) {
 		display: none;
 	}
 }
 
 .hide-sm {
-	@include media($small-screen-only) {
+	@media screen and (max-width: $medium-screen) {
 		display: none;
 	}
 }
 
 .show-md {
-	@include media($small-screen-only) {
+	@media screen and (max-width: $medium-screen) {
 		display: none;
 	}
-	@include media($large-screen) {
+
+	@media screen and (min-width: $large-screen) {
 		display: none;
 	}
 }
 
 .hide-md {
-	@include media($medium-screen-only) {
+  @media (min-width: $medium-screen) and (max-width: $large-screen) {
 		display: none;
 	}
 }
 
 .show-lg {
-	@include media($small-screen-only) {
+	@media screen and (max-width: $medium-screen) {
 		display: none;
 	}
-	@include media($medium-screen-only) {
+
+  @media (min-width: $medium-screen) and (max-width: $large-screen) {
 		display: none;
 	}
 }
 
 .hide-lg {
-	@include media($large-screen) {
+	@media screen and (min-width: $large-screen) {
 		display: none;
 	}
 }
 
 .footer {
-	padding-top:$xxlarge-spacing;
-	padding-bottom:$xxlarge-spacing;
-	font-size: $small-font-size;
+  padding-bottom:$xxlarge-spacing;
+  padding-top:$xxlarge-spacing;
+  font-size: $small-font-size;
 }
