@@ -486,7 +486,10 @@
         order: 8; }
   .batch-c--order-md-9 {
     -ms-flex-order: 9;
-        order: 9; } }
+        order: 9; }
+  .batch-c--order-md-10 {
+    -ms-flex-order: 10;
+        order: 10; } }
 
 /* Large screen cell ordering */
 @media screen and (min-width: 900px) {
@@ -516,7 +519,10 @@
         order: 8; }
   .batch-c--order-lg-9 {
     -ms-flex-order: 9;
-        order: 9; } }
+        order: 9; }
+  .batch-c--order-lg-10 {
+    -ms-flex-order: 10;
+        order: 10; } }
 
 /* Batch cell modifiers */
 .batch-c--valign-self-top {
